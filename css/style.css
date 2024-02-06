@@ -8799,6 +8799,7 @@ h1, h2, h3, h4, h5,
   margin-bottom: 30px;
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
+  min-height: 24rem;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
