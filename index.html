@@ -86,14 +86,36 @@
     	<div class="container">
     		<div class="row justify-content-center pb-3">
     			<div class="col-md-12 heading-section ftco-animate">
-    				<h1 class="big">About</h1>
-    				<h2 class="mb-4">About Me</h2>
-    				<p>I'm a Machine Learning Engineer at Chubb Business Services India, where I develop and deploy cutting-edge ML pipelines and AI solutions. I completed my undergraduate from BITS Pilani, Pilani Campus majoring in Electrical and Electronics Engineering. 
-    				<br><br>
-    				With expertise in Large Language Models, NLP, and scalable ML systems, I've contributed to reducing model inference latency by 40% and improving throughput by 50% through advanced optimization techniques. My work spans from fine-tuning LLaMA-based models to developing production-grade REST APIs and implementing robust CI/CD processes for ML deployments.
-    				<br><br>
-    				I'm passionate about leveraging AI to solve real-world problems and have published research in top-tier conferences including ACL, AACL-IJCNLP, and ACIIDS. My recent projects include AI-driven recipe generation and resume parsing systems that demonstrate the practical applications of modern AI technologies.</p>
-    			</div>
+			    <h1 class="big">About</h1>
+			    <h2 class="mb-4">About Me</h2>
+			
+			    <p>
+			        I am a Machine Learning Engineer at Chubb, where I design, optimize, and deploy large-scale
+			        LLM-powered systems in production. I graduated from BITS Pilani, Pilani Campus with a
+			        Bachelor’s degree in Electrical and Electronics Engineering.
+			        <br><br>
+			
+			        My work focuses on large language models, agentic AI systems, and high-performance inference.
+			        I have built end-to-end fine-tuning pipelines for LLaMA-3.1 (70B) using PEFT techniques
+			        such as LoRA and QLoRA, combined with RAG over internal domain data. These systems improved
+			        task accuracy by 25%, reduced production drift by 15%, and reliably serve over 10,000 daily
+			        requests under peak load.
+			        <br><br>
+			
+			        I specialize in scalable inference and deployment, using vLLM on Kubernetes (AKS) across
+			        A100 and H100 GPUs. Through KV-cache and GPU memory optimizations, I reduced p95 latency by
+			        40% and increased throughput by 50%, while maintaining strict SLA guarantees. My work also
+			        includes production-grade APIs, CI/CD pipelines, monitoring, and automated scaling for
+			        ML systems.
+			        <br><br>
+			
+			        Previously, I was an NLP Research Intern at Nanyang Technological University, where I worked
+			        on code-switching language models and published at ACIIDS and IALP. My research has also been
+			        accepted at venues such as ACL ARR and AACL-IJCNLP. I enjoy building systems that combine
+			        strong theoretical grounding with real-world impact, spanning agentic hiring copilots,
+			        applied NLP research, and large-scale AI infrastructure.
+			    </p>
+			</div>
     		</div>
     	</div>
     </section>
@@ -113,10 +135,13 @@
     					<h2>Machine Learning Engineer</h2>
     					<span class="position">Chubb Business Services India, Hyderabad</span>
     					<p class="mt-4">
-    					• Developed and deployed an end-to-end ML pipeline that fine-tuned a LLaMA-based large language model on domain-specific data, resulting in 25% improvement in inference accuracy and a 15% reduction in model drift<br>
-    					• Engineered a high-performance inference service using vLLM, achieving a 40% reduction in latency and a 50% increase in throughput by leveraging dynamic batching and GPU memory optimizations<br>
-    					• Developed and deployed a Spring Boot-based RESTful API for data mastering, enrichment, and certification, leveraging Maven for streamlined dependency management and advanced caching to improve performance<br>
-    					• Integrated robust CI/CD processes, monitoring, and automated scaling strategies to ensure continuous model improvement and reliable production deployments across cloud-based environments
+						• Fine-tuning at scale (LLaMA-3.1 70B): Built an end-to-end pipeline with PEFT (LoRA/QLoRA) + RAG over internal domain data, improving task accuracy on internal benchmarks by 25% and reducing production drift by 15% over the evaluation window; governed by offline holdout tests and progressive traffic gating.
+						• Agentic AI (orchestration & planning): Integrated a multi-agent workflow directly into the same application. A planner/router decomposes user intents into sub-goals, selects tools (internal search, scraping, structured DB lookups) based on a question taxonomy, and emits step-by-step CoT plans to guide execution.
+						• Agentic AI (evidence retrieval & verification): Implemented retrieval/scrape agents for structured and unstructured sources with source-level citation tracking, plus a verification agent that runs CoT-based cross-checks. This improved factual grounding vs. a single-agent baseline by 18% while keeping response times within the application SLA through caching and bounded tool-use.
+						• High-performance inference & deployment: Productionized with vLLM on AKS across A100/H100 nodes; GPU memory/KV cache optimizations cut p95 latency by 40% and lifted throughput by 50%, reliably serving 10K+ daily requests under peak load.
+						• Integrated robust CI/CD processes, monitoring, and automated scaling strategies to ensure continuous model improvement and reliable production deployments across cloud-based environments.
+						• Architected scalable data pipelines: Implemented robust data processing solutions using SQL Server, Azure Databricks, and PySpark, cutting processing times by 30% and significantly enhancing overall system performance.
+						• Integrated CI/CD, monitoring, and automated scaling: Established end-to-end processes that ensured continuous model improvement and reliable production deployments across cloud-based environments.
     					</p>
     				</div>
 					<div class="resume-wrap ftco-animate">
@@ -125,8 +150,10 @@
 						<span>Speech Lab</span><br>
     					<span class="position">Nanyang Technological University, Singapore</span>
     					<p class="mt-4">
-    					• Developed a machine learning language model tailored for English-Malay code-switched data, achieving a 20% improvement in accuracy over baseline models by implementing advanced statistical and neural augmentation techniques<br>
-    					• Integrated linguistically informed algorithms—including part-of-speech tagging and grammatical coherence—to enhance multilingual NLP robustness and advance the state-of-the-art in code-switching language processing
+						• Developed a machine learning language model tailored for English-Malay code-switched data, achieving a 20% improvement in accuracy over baseline models by implementing advanced statistical and neural augmentation techniques.
+						• Integrated linguistically informed algorithms—including part-of-speech tagging and grammatical coherence—to enhance multilingual NLP robustness and advance the state-of-the-art in code-switching language processing.
+						• Enhanced the model's ability to handle diverse linguistic patterns, advancing the state-of-the-art in code-switching language processing.
+						• Contributed to the development of bilingual communication technologies by applying cutting-edge machine learning techniques for code-switching scenarios.
     					</p>
     				</div>
     				<div class="resume-wrap ftco-animate">
@@ -238,34 +265,62 @@
             </div>
             
             <!-- Insight Project -->
-<!--             <div class="row justify-content-start pb-3">
+            <div class="row justify-content-start pb-3">
                 <div class="col-md-6 col-lg-7 pr-lg-5 pb-5">
                     <div class="row justify-content-start pb-3">
                         <div class="col-md-12 heading-section ftco-animate">
-                            <h1 class="big">Insight</h1>
-                            <h2 class="mb-4"><a href="https://github.com/kjgpta/Insight" target="_blank">GPT-Powered Resume Parser</a></h2>
-                            <p>Insight is an advanced resume parsing system that leverages GPT technology to extract structured insights from diverse resume formats, significantly improving recruitment efficiency and candidate recommendations.</p>
-                            <p><strong>Key Achievements:</strong></p>
-                            <ul class="mt-3">
-                                <li>50% improvement in shortlisting efficiency</li>
-                                <li>Enhanced candidate recommendations through multi-modal data integration</li>
-                                <li>Robust parsing across multiple resume formats and languages</li>
-                                <li>Intelligent skill matching and gap analysis</li>
-                                <li>Seamless integration with existing HR workflows</li>
-                            </ul>
-                            <p class="mt-4"><strong>Technologies:</strong> GPT, OpenAI API, Python, Multi-modal AI, Data Processing</p>
-                            <p class="mt-3"><a href="https://insight.assembleai.in/" target="_blank" class="btn btn-primary py-2 px-4">View Project</a></p>
-                        </div>
+					    <h1 class="big">HawkHire</h1>
+					    <h2 class="mb-4">
+					        <a>
+					            AI Hiring Copilot
+					        </a>
+					    </h2>
+					
+					    <p>
+					        HawkHire is an end-to-end AI-powered hiring copilot that assists recruiters and interview panels with
+					        resume normalization, explainable job description matching, and evidence-backed interview analysis.
+					        It combines multi-agent orchestration with structured reasoning to deliver auditable, high-confidence
+					        hiring decisions.
+					    </p>
+					
+					    <p><strong>Key Capabilities:</strong></p>
+					    <ul class="mt-3">
+					        <li>Explainable JD matching using weighted skills, recency, seniority, and domain fit</li>
+					        <li>Resume parsing and normalization across formats with structured skill extraction</li>
+					        <li>Evidence-linked gap analysis highlighting missing or weak competencies</li>
+					        <li>Interview transcript intelligence using RAG with citation-backed scoring</li>
+					        <li>Multi-agent planner, retriever, and verifier for consistent panel evaluations</li>
+					    </ul>
+					
+					    <p><strong>Impact:</strong></p>
+					    <ul class="mt-2">
+					        <li>Faster shortlisting with higher reviewer agreement</li>
+					        <li>Auditable, evidence-backed evaluations across interview panels</li>
+					        <li>Reduced bias through transparent and explainable scoring</li>
+					    </ul>
+					
+					    <p class="mt-4">
+					        <strong>Technologies:</strong>
+					        GPT, OpenAI API, Python, Multi-Agent Systems, RAG, NLP, Data Processing
+					    </p>
+					
+					    <!-- <p class="mt-3">
+					        <a href="https://insight.assembleai.in/" target="_blank" class="btn btn-primary py-2 px-4">
+					            View Project
+					        </a>
+					    </p> -->
+					</div>
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-5 d-flex">
                     <div class="img-about img d-flex align-items-stretch" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 20px; backdrop-filter: blur(10px);">
                         <div class="img d-flex align-self-stretch align-items-center justify-content-center w-100">
-                            <img src="images/insight.png" alt="Insight Project" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+                            <img src="images/hawkhire.png" alt="Insight Project" style="max-width: 90%; max-height: 90%; object-fit: contain;">
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             
             <!-- Call to Action -->
             <div class="row justify-content-center mt-5">
