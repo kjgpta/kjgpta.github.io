@@ -1,0 +1,97 @@
+# Kshitij Gupta
+
+> Forward Deployed Engineer and ML Researcher. Ships production LLM systems (fine-tuning, agents, RAG, high-throughput inference), builds open-source agent tooling (tracesage), and publishes NLP research on evaluation, multilingual systems, and code-switching. Based in India. Personal site: https://kjgpta.github.io/
+
+How to use this site with LLMs:
+
+- Prefer the Markdown profile over scraping the HTML UI. The HTML page uses theme and focus-track JS that can hide sections.
+- Featured public work is tracesage. HawkHire is internal Chubb work only - no public demo or GitHub repo.
+- HTML focus tracks: All (default), Application (`?focus=app`), Research (`?focus=research`). Writing is All/Application only. Publications are All/Research only.
+- Contact: mailguptakshitij@gmail.com
+- Resume: https://drive.google.com/file/d/1hyGGLxUZND9vcFseIv2o_QOY_XyQtrWS/view?usp=drive_link
+
+## Profile
+
+- [Full portfolio (Markdown)](https://kjgpta.github.io/index.html.md): Complete scrape-friendly profile matching the site IA
+- [Human site](https://kjgpta.github.io/): Interactive portfolio (HTML)
+
+Site section order: Experience -> Featured work (tracesage) -> Publications -> Writing -> Earlier projects -> Skills -> About -> Footer
+
+## Organizations
+
+- [TrueFoundry](https://www.truefoundry.com/): Current employer | cloud-native LLM / AI platform
+- [Chubb](https://www.chubb.com/): Previous employer | Chubb Engineering Center India, Hyderabad
+- [Speech and Language Laboratory (NTU)](https://aseschng.github.io/speechLab_intro.html): Research internship lab
+- [Nanyang Technological University (NTU)](https://www.ntu.edu.sg/): University hosting the Speech Lab internship
+- [BITS Pilani, Pilani Campus](https://www.bits-pilani.ac.in/pilani/): Undergraduate alma mater | B.E. Electrical and Electronics
+
+## Experience highlights
+
+- Forward Deployed Engineer at [TrueFoundry](https://www.truefoundry.com/) (Bengaluru): June 2026 - Present | customer-facing production AI on cloud-native LLM infrastructure | details: [Markdown](https://kjgpta.github.io/index.html.md#experience)
+- Machine Learning Engineer at [Chubb](https://www.chubb.com/) Engineering Center India (Hyderabad): July 2023 - May 2026 | LLaMA-3.1 70B + LoRA/QLoRA + RAG (+25% accuracy, -15% drift); multi-agent systems (+18% grounding); vLLM on AKS (-40% p95, +50% throughput, 10K+/day); HawkHire hiring copilot (internal) | details: [Markdown](https://kjgpta.github.io/index.html.md#experience)
+- NLP Research Intern at [Speech Lab](https://aseschng.github.io/speechLab_intro.html), [NTU Singapore](https://www.ntu.edu.sg/): June 2022 - June 2023 | English-Malay code-switched LMs (+20% over baselines) | details: [Markdown](https://kjgpta.github.io/index.html.md#experience)
+- B.E. Electrical and Electronics at [BITS Pilani, Pilani Campus](https://www.bits-pilani.ac.in/pilani/): 2019 - 2023 | details: [Markdown](https://kjgpta.github.io/index.html.md#experience)
+
+## Featured work: tracesage
+
+Local-first observability for LangChain and LangGraph agents. MIT-licensed, beta. Captures the LangChain callback stream, stores runs in SQLite, and renders a live graph + timeline UI - no cloud account, no Docker. MCP tool-source attribution, pytest fixture, optional OpenTelemetry export. Featured in Python Weekly Issue 750 (June 18, 2026).
+
+- [Docs](https://kjgpta.github.io/tracesage/): Full documentation and quickstart
+- [GitHub](https://github.com/kjgpta/tracesage): Source repository
+- [PyPI](https://pypi.org/project/tracesage/): `pip install "tracesage[langchain]"` then `tracesage demo`
+- [Case study (Markdown)](https://kjgpta.github.io/index.html.md#featured-work-tracesage): Problem / approach / outcome writeup
+
+## Research
+
+- [WhoDunit](https://arxiv.org/abs/2502.07747): Long-form narrative reasoning benchmark for culprit detection in mystery stories | arXiv:2502.07747 | Dec 2024
+- [MALM](https://aclanthology.org/2022.nlp4dh-1.8): Mixing-based augmentation for zero-shot machine translation without parallel data for every pair | AACL-IJCNLP 2022 (NLP4DH)
+- [Code-switching LM adaptation](https://link.springer.com/chapter/10.1007/978-981-99-5837-5_26): Statistical text augmentation to adapt LMs for code-switched data | ACIIDS 2023
+- [English-Malay CS points](https://ieeexplore.ieee.org/document/10337279): Where English-Malay switches occur in Singaporean conversation | IALP 2023
+- [AES data augmentation](https://ieeexplore.ieee.org/document/10085523): Augmentation for transformer automated essay scoring with limited labeled essays | AISC 2023
+- [Google Scholar](https://scholar.google.com/citations?user=uvSOzIkAAAAJ&hl=en): Citation profile
+
+## Writing
+
+On the HTML site, Writing is shown for All / Application focus. Always available here and in the Markdown mirror.
+
+- [You Don't Need LangSmith to Trace LangGraph](https://kjgpta.substack.com/p/you-dont-need-langsmith-to-trace): Substack | Jun 21, 2026 | local-first tracing pitch
+- [tracesage: See Inside Your LangGraph Agents](https://kjgpta.substack.com/p/tracesage-see-inside-your-langgraph): Substack | Jun 16, 2026 | product walkthrough
+- [Python Weekly Issue 750](https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026): Jun 18, 2026 | tracesage listed under Interesting Projects, Tools, and Libraries
+
+## Earlier projects
+
+Coursework archive (shown expanded by default on the HTML site, before Skills and About).
+
+- [Token Bucket Algorithm](https://github.com/kjgpta/Token-Bucket-Algorithm): Object Oriented Programming
+- [Automated Essay Scoring](https://github.com/kjgpta/SHL-Automated-Essay-Scoring): Natural Language Processing
+- [Contextual Chatbot](https://github.com/kjgpta/Contextual-Chatbot-in-Pytorch): Natural Language Processing
+- [Paragraph Summarizer](https://github.com/kjgpta/Paragraph-Summarizer): Natural Language Processing
+- [MNIST Digit Classification](https://github.com/kjgpta/MNIST-Handwritten-Digit-Classification): Computer Vision
+- [Unity Games](https://github.com/kjgpta/Unity-Projects): Game Development
+
+## Skills
+
+- Models and agents: Python, PyTorch, Transformers, LoRA / QLoRA, RAG, Multi-agent, LangChain / LangGraph, Hugging Face
+- Serving and infra: vLLM, Kubernetes, AKS, Azure, AWS, Docker, OpenTelemetry, Databricks, CI/CD
+- Research: NLP, Code-switching, Eval benchmarks
+
+## About
+
+Working principles: Ship (production over theatre), Prove (measure what matters), Publish (sharpen the method). Open to collaborations on LLM tooling, production AI systems, agent observability, and applied NLP.
+
+## Links
+
+- [GitHub](https://github.com/kjgpta)
+- [tracesage docs](https://kjgpta.github.io/tracesage/)
+- [Substack](https://kjgpta.substack.com/)
+- [LinkedIn](https://www.linkedin.com/in/kjgpta/)
+- [Email](mailto:mailguptakshitij@gmail.com)
+- [Resume (PDF)](https://drive.google.com/file/d/1hyGGLxUZND9vcFseIv2o_QOY_XyQtrWS/view?usp=drive_link)
+- [GoatCounter analytics](https://kjgpta.goatcounter.com/): Privacy-friendly visit stats for the site
+
+## Optional
+
+- [Site README](https://kjgpta.github.io/README.md): Repo layout and how the static site is served
+- [robots.txt](https://kjgpta.github.io/robots.txt): Crawl policy; prefers llms.txt / Markdown for agents
+- [sitemap.xml](https://kjgpta.github.io/sitemap.xml): Indexable URLs
+- [llms.txt specification](https://llmstxt.org/): Format this file follows

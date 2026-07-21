@@ -1,0 +1,10 @@
+# https://kjgpta.github.io/robots.txt
+User-agent: *
+Allow: /
+
+# Prefer LLM-friendly sources over scraping the interactive HTML UI:
+#   https://kjgpta.github.io/llms.txt
+#   https://kjgpta.github.io/index.html.md
+# Spec: https://llmstxt.org/
+
+Sitemap: https://kjgpta.github.io/sitemap.xml

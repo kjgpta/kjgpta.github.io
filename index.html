@@ -1,554 +1,1137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
-    <title>Kshitij Gupta</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kshitij Gupta — Forward Deployed Engineer &amp; ML Researcher</title>
+    <meta
+      name="description"
+      content="Kshitij Gupta — Forward Deployed Engineer and ML Researcher. Production LLM systems, AI infrastructure, and NLP research."
+    />
+    <meta
+      name="author"
+      content="Kshitij Gupta"
+    />
+    <meta
+      name="keywords"
+      content="Kshitij Gupta, Forward Deployed Engineer, ML Researcher, tracesage, LangGraph, LLM, RAG, NLP, TrueFoundry, Chubb"
+    />
+    <link rel="canonical" href="https://kjgpta.github.io/" />
+    <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+    <link
+      rel="alternate"
+      type="text/markdown"
+      title="Markdown profile"
+      href="/index.html.md"
+    />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <meta property="og:title" content="Kshitij Gupta — Forward Deployed Engineer & ML Researcher" />
+    <meta
+      property="og:description"
+      content="Production LLM systems, AI infrastructure, and NLP research — from deployment to publications."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kjgpta.github.io/" />
+    <meta property="og:image" content="https://kjgpta.github.io/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kshitij Gupta — Forward Deployed Engineer and ML Researcher" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kshitij Gupta — Forward Deployed Engineer & ML Researcher" />
+    <meta
+      name="twitter:description"
+      content="Production LLM systems, AI infrastructure, and NLP research — from deployment to publications."
+    />
+    <meta name="twitter:image" content="https://kjgpta.github.io/images/og-image.png" />
+    <meta name="theme-color" content="#04070D" id="theme-color-meta" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kshitij Gupta",
+        "url": "https://kjgpta.github.io/",
+        "email": "mailto:mailguptakshitij@gmail.com",
+        "jobTitle": ["Forward Deployed Engineer", "ML Researcher"],
+        "description": "Forward Deployed Engineer and ML Researcher. Production LLM systems, AI infrastructure, open-source agent observability (tracesage), and NLP research on evaluation, multilingual systems, and code-switching.",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "BITS Pilani",
+          "url": "https://www.bits-pilani.ac.in/pilani/"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "TrueFoundry",
+          "url": "https://www.truefoundry.com/"
+        },
+        "sameAs": [
+          "https://github.com/kjgpta",
+          "https://github.com/kjgpta/tracesage",
+          "https://kjgpta.substack.com/",
+          "https://www.linkedin.com/in/kjgpta/",
+          "https://scholar.google.com/citations?user=uvSOzIkAAAAJ&hl=en"
+        ],
+        "knowsAbout": [
+          "Large language models",
+          "Retrieval-augmented generation",
+          "Multi-agent systems",
+          "LangChain",
+          "LangGraph",
+          "Agent observability",
+          "Natural language processing",
+          "Code-switching",
+          "MLOps",
+          "vLLM",
+          "Kubernetes",
+          "OpenTelemetry"
+        ]
+      }
+    </script>
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("theme-dir") !== "clear-signal") {
+            localStorage.setItem("theme", "dark");
+            localStorage.setItem("theme-dir", "clear-signal");
+          }
+          var saved = localStorage.getItem("theme");
+          var theme = saved === "light" || saved === "dark" ? saved : "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Kshitij</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-              <li class="nav-item"><a href="#background-section" class="nav-link"><span>Experience</span></a></li>
-	          <li class="nav-item"><a href="#publication-section" class="nav-link"><span>Publications</span></a></li>
-              <li class="nav-item"><a href="#AssembleAI" class="nav-link"><span>AssembleAI</span></a></li>
-	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-              <li class="nav-item"><a href="#interests-section" class="nav-link"><span>Interests</span></a></li>
-	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	      <div class="slider-item ">
-	      	<div class="overlay"></div>
-	        <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/coder.png);">
-	          		<div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Kshitij Gupta</span></h1>
-			            <h2 class="mb-4">Forward Deployed Engineer</h2>
-			            <p class="mb-4" style="color: #fff; font-size: 18px; font-weight: 400;">LLMs, AI Infrastructure, and Production Engineering</p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-	      </div>
-	    </div>
-	    
-	    <!-- Social Media Links moved outside slider -->
-	    <div class="container">
-	        <div class="row">
-	            <div class="col-md-12">
-	                <ul class="ftco-footer-social list-unstyled d-flex justify-content-center mt-5 mb-5">
-	                    <li class="ftco-animate mx-3"><a href="https://www.linkedin.com/in/kjgpta/" target="_blank" style="color: #0077b5;"><span class="icon-linkedin"></span></a></li>
-	                    <li class="ftco-animate mx-3"><a href="https://scholar.google.com/citations?user=uvSOzIkAAAAJ&hl=en" target="_blank" style="color: #4285f4;"><span class="icon-google"></span></a></li>
-	                    <li class="ftco-animate mx-3"><a href="https://github.com/kjgpta" target="_blank" style="color: #333;"><span class="icon-github"></span></a></li>
-	                    <li class="ftco-animate mx-3"><a href="mailto:mailguptakshitij@gmail.com" target="_blank" style="color: #ea4335;"><span class="icon-envelope"></span></a></li>
-	                </ul>
-	            </div>
-	        </div>
-	    </div>
-    </section>
+    <div class="page-atmosphere" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="aurora"></div>
+      <div class="mesh-shift"></div>
+      <div class="atmosphere-beam"></div>
+      <div class="atmosphere-vignette"></div>
+      <div class="atmosphere-noise"></div>
+    </div>
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-3">
-    			<div class="col-md-12 heading-section ftco-animate">
-			    <h1 class="big">About</h1>
-			    <h2 class="mb-4">About Me</h2>
-			
-			    <p>
-			        I am a Forward Deployed Engineer at TrueFoundry, where I work with customers to design, build, and deploy AI applications in production. My work spans large language models, machine learning infrastructure, and distributed systems, with a focus on turning complex AI capabilities into reliable products.
-			        <br><br>
-			
-			        Previously, I worked as a Machine Learning Engineer at Chubb, building and scaling LLM-powered systems for enterprise use cases. This included model fine-tuning, retrieval-augmented generation (RAG), agentic workflows, and high-performance inference infrastructure serving production workloads at scale.
-			        <br><br>
-			
-			        My experience covers the full lifecycle of AI systems—from research and experimentation to deployment, observability, and operationalization. I have worked on model serving, cloud-native infrastructure, and production AI platforms, with an emphasis on building systems that are both scalable and maintainable.
-			        <br><br>
-			
-			        I also have a research background in natural language processing from Nanyang Technological University (NTU), Singapore, where I worked on code-switching language models and multilingual NLP. My research has resulted in publications at venues including ACL ARR, AACL-IJCNLP, ACIIDS, and IALP. Across both industry and research, I enjoy working on problems at the intersection of machine learning, software engineering, and infrastructure, with a particular focus on deploying AI systems that create measurable real-world impact.
-			    </p>
-			</div>
-    		</div>
-    	</div>
-    </section>
+    <header class="site-nav" id="top">
+      <div class="nav-inner">
+        <a class="brand" href="#home">Kshitij<span>.</span></a>
+        <ul class="nav-links nav-links-desktop">
+          <li data-tracks="all app research"><a href="#home">Home</a></li>
+          <li data-tracks="all app research"><a href="#experience">Experience</a></li>
+          <li data-tracks="all app research"><a href="#work">Work</a></li>
+          <li data-tracks="all research"><a href="#publications">Research</a></li>
+          <li data-tracks="all app"><a href="#writing">Writing</a></li>
+          <li data-tracks="all app research"><a href="#projects">Projects</a></li>
+          <li data-tracks="all app research"><a href="#skills">Skills</a></li>
+          <li data-tracks="all app research"><a href="#about">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="icon-btn theme-toggle"
+            type="button"
+            aria-label="Toggle light and dark theme"
+            title="Toggle theme"
+          >
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 4.5V2m0 20v-2.5M4.5 12H2m20 0h-2.5M6.3 6.3 4.5 4.5m13.2 13.2 1.8 1.8m0-15-1.8 1.8M6.3 17.7 4.5 19.5M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-    <section class="ftco-section ftco-no-pb" id="background-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-				<div class="col-md-10 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Experience</h1>
-					<h2 class="mb-4">Professional Experience & Education</h2>
-				</div>
-        	</div>
-    		<div class="row">
-				<div class="col-md-6">
-                    <div class="resume-wrap ftco-animate">
-    					<span class="date">June 2026 - Present</span>
-    					<h2>Forward Deployed Engineer</h2>
-    					<span class="position">Truefoundry, Bengaluru</span>
-    					<p class="mt-4">
-						• Developing and deploying production-grade AI/ML applications, leveraging cloud-native infrastructure, LLMs, and modern
-                        software engineering practices.<br>
-                        • Working directly with customers to solve complex technical challenges, drive adoption of platform capabilities, and deliver
-                        measurable business impact.<br>
-                        • Collaborating with cross-functional teams across engineering, product, and customer stakeholders to rapidly prototype, iterate,
-                        and deliver high-impact solutions in production environments.<br>
-                        </p>
-    				</div>
-					<div class="resume-wrap ftco-animate">
-    					<span class="date">July 2023 - May 2026</span>
-    					<h2>Machine Learning Engineer</h2>
-    					<span class="position">Chubb Engineering Center India, Hyderabad</span>
-    					<p class="mt-4">
-						• Fine-tuning at scale (LLaMA-3.1 70B): Built an end-to-end pipeline with PEFT (LoRA/QLoRA) + RAG over internal domain data, improving task accuracy on internal benchmarks by 25% and reducing production drift by 15% over the evaluation window; governed by offline holdout tests and progressive traffic gating.<br>
-						• Agentic AI (orchestration & planning): Integrated a multi-agent workflow directly into the same application. A planner/router decomposes user intents into sub-goals, selects tools (internal search, scraping, structured DB lookups) based on a question taxonomy, and emits step-by-step CoT plans to guide execution.<br>
-						• Agentic AI (evidence retrieval & verification): Implemented retrieval/scrape agents for structured and unstructured sources with source-level citation tracking, plus a verification agent that runs CoT-based cross-checks. This improved factual grounding vs. a single-agent baseline by 18% while keeping response times within the application SLA through caching and bounded tool-use.<br>
-						• High-performance inference & deployment: Productionized with vLLM on AKS across A100/H100 nodes; GPU memory/KV cache optimizations cut p95 latency by 40% and lifted throughput by 50%, reliably serving 10K+ daily requests under peak load.<br>
-						• Integrated robust CI/CD processes, monitoring, and automated scaling strategies to ensure continuous model improvement and reliable production deployments across cloud-based environments.<br>
-						• Architected scalable data pipelines: Implemented robust data processing solutions using SQL Server, Azure Databricks, and PySpark, cutting processing times by 30% and significantly enhancing overall system performance.<br>
-						• Integrated CI/CD, monitoring, and automated scaling: Established end-to-end processes that ensured continuous model improvement and reliable production deployments across cloud-based environments.<br>
-    					</p>
-    				</div>
-					<div class="resume-wrap ftco-animate">
-    					<span class="date">June 2022 - June 2023</span>
-    					<h2>NLP Research Intern</h2>
-						<span>Speech Lab</span><br>
-    					<span class="position">Nanyang Technological University, Singapore</span>
-    					<p class="mt-4">
-						• Developed a machine learning language model tailored for English-Malay code-switched data, achieving a 20% improvement in accuracy over baseline models by implementing advanced statistical and neural augmentation techniques.<br>
-						• Integrated linguistically informed algorithms—including part-of-speech tagging and grammatical coherence—to enhance multilingual NLP robustness and advance the state-of-the-art in code-switching language processing.<br>
-						• Enhanced the model's ability to handle diverse linguistic patterns, advancing the state-of-the-art in code-switching language processing.<br>
-						• Contributed to the development of bilingual communication technologies by applying cutting-edge machine learning techniques for code-switching scenarios.<br>
-    					</p>
-    				</div>
-    				<!-- <div class="resume-wrap ftco-animate">
-    					<span class="date">Summer' 21</span>
-    					<h2>App Developer Intern</h2>
-    					<span class="position">Army Base Workshop, Pithoragarh</span>
-    					<p class="mt-4">Built a web app that keeps track of inventory of Army Camp in a Digital Ledger through an intuitive UI</p>
-    				</div> -->
-    				
-    			</div>
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2019-2023</span>
-    					<h2>Bachelors of Engineering</h2>
-						<span>Electrical and Electronics Engineering</span><br>
-    					<span class="position">BITS Pilani, Pilani Campus</span>
-    				</div>
-    			</div>
-    		</div>
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/1hyGGLxUZND9vcFseIv2o_QOY_XyQtrWS/view?usp=drive_link" target="_blank" class="btn btn-primary py-4 px-5">Resume</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-	
-    <section class="ftco-section ftco-no-pb" id="publication-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-				<div class="col-md-10 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Publications</h1>
-					<h2 class="mb-4">Publications</h2>
-				</div>
-        	</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date" style="font-size:25px"><a href="https://arxiv.org/pdf/2502.07747" target="_blank"> WhoDunit: Evaluation benchmark for culprit detection in mystery stories</a></span>
-						<h1 class="mb-4 mt-3" style="font-size:15px"><span>ACL ARR December 2024</span></h1>
-						<span class="position">Arxiv</span>
-					</div>
-					<div class="resume-wrap ftco-animate">
-						<span class="date" style="font-size:25px"><a href="https://aclanthology.org/2022.nlp4dh-1.8" target="_blank"> MALM: Mixing Augmented Language Modeling for Zero-Shot Machine Translation</a></span>
-						<a href="https://rootroo.com/en/nlp4dh-2022/" target="_blank" ><h1 class="mb-4 mt-3" style="font-size:15px"><span>NLP4DH, AACL-IJCNLP 2022</span></h1></a>
-						<span class="position">Taiwan</span>
-					</div>
-					<div class="resume-wrap ftco-animate">
-						<span class="date" style="font-size:25px"><a href="https://link.springer.com/chapter/10.1007/978-981-99-5837-5_26" target="_blank"> Adapting Code-Switching Language Models with Statistical-Based Text Augmentation</a></span>
-						<a href="https://aciids.pwr.edu.pl/2023/" target="_blank"><h1 class="mb-4 mt-3" style="font-size:15px"><span>ACIIDS 2023</span></h1></a>
-						<span class="position">Thailand</span>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date" style="font-size:25px"><a href="https://ieeexplore.ieee.org/document/10337279" target="_blank"> Singaporean Conversational English-Malay Code-Switching Points</a></span>
-						<a href="https://www.colips.org/conferences/ialp2023/wp/" target="_blank"><h1 class="mb-4 mt-3" style="font-size:15px"><span>IALP 2023</span></h1></a>
-						<span class="position">Singapore</span>
-					</div>
-					<div class="resume-wrap ftco-animate">
-						<span class="date" style="font-size:25px"><a href="https://ieeexplore.ieee.org/document/10085523" target="_blank"> Data Augmentation for Automated Essay Scoring using Transformer Models</a></span>
-						<a href="https://www.glbitm.org/aisc-23/" target="_blank"><h1 class="mb-4 mt-3" style="font-size:15px"><span>AISC 2023</span></h1></a>
-						<span class="position">India</span>
-					</div>
-				</div>
-			</div>	
-		</div>
-    	</div>
-    </section>
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+    <nav
+      class="mobile-drawer"
+      id="primary-nav"
+      aria-label="Mobile"
+      aria-labelledby="drawer-title"
+      aria-modal="true"
+      role="dialog"
+      hidden
+    >
+      <p class="drawer-label" id="drawer-title">Navigate</p>
+      <ul class="nav-links nav-links-mobile">
+        <li data-tracks="all app research">
+          <a href="#home"><span class="nav-index">01</span>Home</a>
+        </li>
+        <li data-tracks="all app research">
+          <a href="#experience"><span class="nav-index">02</span>Experience</a>
+        </li>
+        <li data-tracks="all app research">
+          <a href="#work"><span class="nav-index">03</span>Work</a>
+        </li>
+        <li data-tracks="all research">
+          <a href="#publications"><span class="nav-index">04</span>Research</a>
+        </li>
+        <li data-tracks="all app">
+          <a href="#writing"><span class="nav-index">05</span>Writing</a>
+        </li>
+        <li data-tracks="all app research">
+          <a href="#projects"><span class="nav-index">06</span>Projects</a>
+        </li>
+        <li data-tracks="all app research">
+          <a href="#skills"><span class="nav-index">07</span>Skills</a>
+        </li>
+        <li data-tracks="all app research">
+          <a href="#about"><span class="nav-index">08</span>About</a>
+        </li>
+      </ul>
+    </nav>
 
-    <section class="ftco-section" id="AssembleAI">
+    <main id="content">
+      <section class="hero" id="home" aria-label="Introduction">
+        <div class="container hero-shell">
+          <div class="hero-copy hero-stagger">
+            <h1 class="hero-name">Kshitij Gupta</h1>
+
+            <div
+              class="track-control"
+              role="radiogroup"
+              aria-label="Focus portfolio on application, research, or both"
+              data-track-control
+            >
+              <span class="track-glow" aria-hidden="true"></span>
+              <span class="track-indicator" aria-hidden="true" data-track-indicator></span>
+              <button
+                type="button"
+                class="track-btn is-active"
+                role="radio"
+                id="track-all"
+                aria-checked="true"
+                data-track="all"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                class="track-btn"
+                role="radio"
+                id="track-app"
+                aria-checked="false"
+                data-track="app"
+              >
+                Application
+              </button>
+              <button
+                type="button"
+                class="track-btn"
+                role="radio"
+                id="track-research"
+                aria-checked="false"
+                data-track="research"
+              >
+                Research
+              </button>
+            </div>
+
+            <p class="hero-role" data-track-copy="all">
+              Forward Deployed Engineer &amp; ML Researcher
+            </p>
+            <p class="hero-role" data-track-copy="app" hidden>
+              Forward Deployed Engineer · production LLM systems
+            </p>
+            <p class="hero-role" data-track-copy="research" hidden>
+              ML Researcher · NLP evaluation &amp; multilingual systems
+            </p>
+
+            <p class="hero-support" data-track-copy="all">
+              I ship production LLM systems — and publish the NLP research that sharpens how those
+              systems are built.
+            </p>
+            <p class="hero-support" data-track-copy="app" hidden>
+              I turn platform capabilities into customer-facing AI that holds up under real traffic —
+              fine-tuning, agents, RAG, and high-throughput inference.
+            </p>
+            <p class="hero-support" data-track-copy="research" hidden>
+              I build evaluation benchmarks and code-switching models — methods that make LLM systems
+              sharper in multilingual and long-form settings.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="https://drive.google.com/file/d/1hyGGLxUZND9vcFseIv2o_QOY_XyQtrWS/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Resume</a
+              >
+              <a class="btn btn-ghost" href="mailto:mailguptakshitij@gmail.com">Contact</a>
+            </div>
+            <ul class="social-row" aria-label="Social links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/kjgpta/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://scholar.google.com/citations?user=uvSOzIkAAAAJ&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Google Scholar"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM3.86 10.73v4.76c1.74 1.05 4.55 1.76 8.14 1.76s6.4-.71 8.14-1.76v-4.76L12 15.27 3.86 10.73z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/kjgpta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:mailguptakshitij@gmail.com" aria-label="Email">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="proof-strip" aria-label="Selected proof points">
+            <a class="proof-row" href="#work" data-tracks="all app research">
+              <span class="proof-idx">01</span>
+              <span class="proof-kicker">Open source</span>
+              <span class="proof-name">tracesage</span>
+              <span class="proof-meta">Local-first LangGraph tracing · Python Weekly</span>
+              <span class="proof-go" aria-hidden="true">→</span>
+            </a>
+            <a
+              class="proof-row"
+              href="https://arxiv.org/abs/2502.07747"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tracks="all research"
+            >
+              <span class="proof-idx">02</span>
+              <span class="proof-kicker">Research</span>
+              <span class="proof-name">WhoDunit</span>
+              <span class="proof-meta">Narrative reasoning benchmark · arXiv · Dec 2024</span>
+              <span class="proof-go" aria-hidden="true">→</span>
+            </a>
+            <a class="proof-row" href="#experience" data-tracks="all app">
+              <span class="proof-idx">03</span>
+              <span class="proof-kicker">Production</span>
+              <span class="proof-name">Chubb · LLM platform</span>
+              <span class="proof-meta">+25% accuracy · −40% p95 · 10K+/day</span>
+              <span class="proof-go" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience" data-tracks="all app research">
         <div class="container">
-            <div class="row justify-content-center pb-5">
-                <div class="col-md-10 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">Assemble AI</h1>
-                    <h2 class="mb-4">Open Source LLM Tools Initiative</h2>
-                    <p>Assemble AI is my open-source initiative dedicated to leveraging AI for real-world problems. Through this platform, I create innovative LLM-powered tools that demonstrate the practical applications of modern AI technologies, from personalized content generation to intelligent data processing.</p>
-                </div>
-            </div>
-            
-            <!-- SmartChef Project -->
-            <!-- <div class="row justify-content-start pb-5">
-                <div class="col-md-6 col-lg-5 d-flex">
-                    <div class="img-about img d-flex align-items-stretch" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 20px; backdrop-filter: blur(10px);">
-                        <div class="img d-flex align-self-stretch align-items-center justify-content-center w-100">
-                            <img src="images/smartchef.png" alt="SmartChef Project" style="max-width: 90%; max-height: 90%; object-fit: contain;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-                    <div class="row justify-content-start pb-3">
-                        <div class="col-md-12 heading-section ftco-animate">
-                            <h1 class="big">SmartChef</h1>
-                            <h2 class="mb-4"><a href="https://github.com/kjgpta/SmartChef" target="_blank">AI-Driven Personalized Recipe Generator</a></h2>
-                            <p>SmartChef is an intelligent recipe generation system that utilizes GPT and advanced NLP techniques to craft custom recipes based on available ingredients, cuisine preferences, dietary restrictions, and nutritional needs.</p>
-                            <p><strong>Key Features:</strong></p>
-                            <ul class="mt-3">
-                                <li>Personalized recipe recommendations using advanced AI algorithms</li>
-                                <li>Dietary restriction and nutritional optimization</li>
-                                <li>Multi-cuisine support with cultural authenticity</li>
-                                <li>Ingredient substitution suggestions</li>
-                                <li>Scalable deployment via Docker and cloud infrastructure</li>
-                            </ul>
-                            <p class="mt-4"><strong>Technologies:</strong> GPT, OpenAI API, Python, NLP, Docker, AWS</p>
-                            <p class="mt-3"><a href="https://smartchef.assembleai.in/" target="_blank" class="btn btn-primary py-2 px-4">View Project</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            
-            <!-- Insight Project -->
-            <div class="row justify-content-start pb-3">
-                <div class="col-md-6 col-lg-7 pr-lg-5 pb-5">
-                    <div class="row justify-content-start pb-3">
-                        <div class="col-md-12 heading-section ftco-animate">
-					    <h1 class="big">HawkHire</h1>
-					    <h2 class="mb-4">
-					        <a>
-					            AI Hiring Copilot
-					        </a>
-					    </h2>
-					
-					    <p>
-					        HawkHire is an end-to-end AI-powered hiring copilot that assists recruiters and interview panels with
-					        resume normalization, explainable job description matching, and evidence-backed interview analysis.
-					        It combines multi-agent orchestration with structured reasoning to deliver auditable, high-confidence
-					        hiring decisions.
-					    </p>
-					
-					    <p><strong>Key Capabilities:</strong></p>
-					    <ul class="mt-3">
-					        <li>Explainable JD matching using weighted skills, recency, seniority, and domain fit</li>
-					        <li>Resume parsing and normalization across formats with structured skill extraction</li>
-					        <li>Evidence-linked gap analysis highlighting missing or weak competencies</li>
-					        <li>Interview transcript intelligence using RAG with citation-backed scoring</li>
-					        <li>Multi-agent planner, retriever, and verifier for consistent panel evaluations</li>
-					    </ul>
-					
-					    <p><strong>Impact:</strong></p>
-					    <ul class="mt-2">
-					        <li>Faster shortlisting with higher reviewer agreement</li>
-					        <li>Auditable, evidence-backed evaluations across interview panels</li>
-					        <li>Reduced bias through transparent and explainable scoring</li>
-					    </ul>
-					
-					    <p class="mt-4">
-					        <strong>Technologies:</strong>
-					        GPT, OpenAI API, Python, Multi-Agent Systems, RAG, NLP, Data Processing
-					    </p>
-					
-					    <!-- <p class="mt-3">
-					        <a href="https://insight.assembleai.in/" target="_blank" class="btn btn-primary py-2 px-4">
-					            View Project
-					        </a>
-					    </p> -->
-					</div>
+          <div class="section-head reveal">
+            <span class="section-kicker">Experience</span>
+            <h2 class="section-title">Where the work shipped</h2>
+          </div>
 
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5 d-flex">
-                    <div class="img-about img d-flex align-items-stretch" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 20px; backdrop-filter: blur(10px);">
-                        <div class="img d-flex align-self-stretch align-items-center justify-content-center w-100">
-                            <img src="images/hawkhire.png" alt="Insight Project" style="max-width: 90%; max-height: 90%; object-fit: contain;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Call to Action -->
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-8 text-center ftco-animate">
-                    <p class="mb-4">Interested in collaborating on LLM tools or learning more about these projects?</p>
-                    <p><a href="https://github.com/kjgpta" target="_blank" class="btn btn-primary py-3 px-5">Explore on GitHub</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <span class="timeline-date">June 2026 — Present</span>
+              <h3 class="timeline-role">Forward Deployed Engineer</h3>
+              <p class="timeline-org">
+                <a
+                  href="https://www.truefoundry.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >TrueFoundry</a
+                >
+                · Bengaluru
+              </p>
+              <ul class="timeline-list">
+                <li>
+                  Partner with customers to ship production AI apps on cloud-native LLM
+                  infrastructure.
+                </li>
+                <li>
+                  Turn platform capabilities into adoption paths and measurable business outcomes —
+                  not slide-deck demos.
+                </li>
+              </ul>
+            </article>
 
-    <section class="ftco-section" id="skills-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-				<div class="col-md-10 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Skills</h1>
-					<h2 class="mb-4">Technical Expertise</h2>
-				</div>
-        	</div>
-    		<div class="row">
-				<div class="col-md-4">
-					<div class="resume-wrap ftco-animate">
-    					<h3>Programming Languages</h3>
-    					<p class="mt-3">Python, Java, C, C++, C#, JavaScript</p>
-    				</div>
-				</div>
-				<div class="col-md-4">
-					<div class="resume-wrap ftco-animate">
-    					<h3>AI/ML Technologies</h3>
-    					<p class="mt-3">PyTorch, TensorFlow, Transformers, Hugging Face, vLLM, Keras</p>
-    				</div>
-				</div>
-				<div class="col-md-4">
-					<div class="resume-wrap ftco-animate">
-    					<h3>Cloud & Infrastructure</h3>
-    					<p class="mt-3">AWS, Azure, Docker, Kubernetes, Git, GitHub</p>
-    				</div>
-				</div>
-				<div class="col-md-4">
-					<div class="resume-wrap ftco-animate">
-    					<h3>Frameworks & Tools</h3>
-    					<p class="mt-3">Flask, Spring Boot, Databricks, Maven, LaTeX</p>
-    				</div>
-				</div>
-				<div class="col-md-4">
-					<div class="resume-wrap ftco-animate">
-    					<h3>Databases</h3>
-    					<p class="mt-3">SQL, RDS</p>
-    				</div>
-				</div>
-				<div class="col-md-4">
-					<div class="resume-wrap ftco-animate">
-    					<h3>Specializations</h3>
-    					<p class="mt-3">Large Language Models, NLP, Computer Vision, MLOps</p>
-    				</div>
-				</div>
-			</div>
-		</div>
-    </section>
-		
-		<section class="ftco-section" id="interests-section">
-			<div class="container">
-				<div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Interests</h1>
-            <h2 class="mb-4">My Interests</h2>
+            <article class="timeline-item reveal reveal-delay-1">
+              <span class="timeline-date">July 2023 — May 2026</span>
+              <h3 class="timeline-role">Machine Learning Engineer</h3>
+              <p class="timeline-org">
+                <a href="https://www.chubb.com/" target="_blank" rel="noopener noreferrer">Chubb</a>
+                Engineering Center India · Hyderabad
+              </p>
+              <ul class="timeline-list">
+                <li>LLaMA-3.1 70B + LoRA/QLoRA + RAG — +25% accuracy, −15% drift.</li>
+                <li>Multi-agent planner / retriever / verifier — +18% factual grounding.</li>
+                <li>vLLM on AKS (A100/H100) — −40% p95, +50% throughput, 10K+ daily requests.</li>
+                <li>Built HawkHire — explainable AI hiring copilot for internal recruiting workflows.</li>
+              </ul>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-2">
+              <span class="timeline-date">June 2022 — June 2023</span>
+              <h3 class="timeline-role">NLP Research Intern</h3>
+              <p class="timeline-org">
+                <a
+                  href="https://aseschng.github.io/speechLab_intro.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Speech Lab</a
+                >
+                ·
+                <a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener noreferrer"
+                  >NTU Singapore</a
+                >
+              </p>
+              <ul class="timeline-list">
+                <li>English–Malay code-switched LMs — +20% over baselines.</li>
+                <li>Published multilingual and code-switching work across ACL-adjacent venues.</li>
+              </ul>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-3">
+              <span class="timeline-date">2019 — 2023</span>
+              <h3 class="timeline-role">B.E. Electrical &amp; Electronics</h3>
+              <p class="timeline-org">
+                <a
+                  href="https://www.bits-pilani.ac.in/pilani/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >BITS Pilani, Pilani Campus</a
+                >
+              </p>
+              <ul class="timeline-list">
+                <li>Foundations in systems, ML coursework, and applied software projects.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="experience-cta reveal">
+            <a
+              class="btn btn-primary"
+              href="https://drive.google.com/file/d/1hyGGLxUZND9vcFseIv2o_QOY_XyQtrWS/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View resume</a
+            >
           </div>
         </div>
-				<div class="row">
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>Large Language Models (LLMs)</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>AI Applications</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>Agentic Systems</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>Retrieval-Augmented Generation</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>Model Serving & Inference</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>Machine Learning Infrastructure</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>Distributed Systems</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>Cloud & Kubernetes</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>Applied NLP Research</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="progress-wrap ftco-animate">
-                            <h3>Production AI Systems</h3>
-                        </div>
-                    </div>
-                </div>
-			</div>
-		</section>
- 
+      </section>
 
-    <section class="ftco-section ftco-project" id="projects-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">My Projects</h2>
+      <section class="section" id="work" data-tracks="all app research">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-kicker">Featured work</span>
+            <h2 class="section-title">tracesage</h2>
+            <p class="section-lead">
+              Local-first LangGraph tracing — one callback, live graph UI, no cloud.
+            </p>
+          </div>
+
+          <div class="featured case-study">
+            <div class="featured-stage case-media reveal">
+              <div class="stage-chrome">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span
+                ><span aria-hidden="true"></span>
+                <p class="stage-url">tracesage · live topology</p>
+              </div>
+              <figure class="case-figure">
+                <img
+                  src="images/tracesage-topology.png"
+                  alt="tracesage UI showing a live LangGraph agent topology with agents, MCP tools, and LLM nodes"
+                  loading="lazy"
+                  decoding="async"
+                  width="1600"
+                  height="1056"
+                />
+                <figcaption class="stage-caption">Live agent topology</figcaption>
+              </figure>
+            </div>
+
+            <div class="featured-copy reveal reveal-delay-1">
+              <p class="featured-label">Open source · MIT</p>
+              <h3 class="featured-title">See what your agents did</h3>
+              <p class="featured-subtitle">
+                Capture LangChain / LangGraph runs locally as a graph and timeline — prompts stay on
+                your machine.
+              </p>
+              <p class="case-line">
+                <strong>Problem</strong> Hosted tracers work, but local debugging shouldn’t require a
+                cloud account.
+              </p>
+              <p class="case-line">
+                <strong>Outcome</strong>
+                <code>pip install "tracesage[langchain]"</code> → <code>tracesage demo</code> ·
+                featured in
+                <a
+                  href="https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Python Weekly #750</a
+                >.
+              </p>
+              <ul class="capability-list">
+                <li>MCP tool attribution · crash-safe handler · optional OTel export</li>
+              </ul>
+              <div class="case-links">
+                <a
+                  class="btn btn-primary"
+                  href="https://kjgpta.github.io/tracesage/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Docs</a
+                >
+                <a
+                  class="btn btn-ghost"
+                  href="https://github.com/kjgpta/tracesage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+                <a
+                  class="btn btn-ghost"
+                  href="https://pypi.org/project/tracesage/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >PyPI</a
+                >
+              </div>
+              <p class="tech-line">Python · LangChain · LangGraph · MCP</p>
+            </div>
           </div>
         </div>
-    		<div class="row">
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/tokenbucketimage.png);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/kjgpta/Token-Bucket-Algorithm" target="_blank">Token Bucket Algorithm</a></h3>
-	    					<span>Object Oriented Programming</span>
-	    				</div>
-    				</div>
-  				</div>
-  				<div class="col-md-8">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/essay.jpeg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/kshitijgupta01/Automated-Essay-Scoring" target="_blank">Automated Essay Scoring</a></h3>
-	    					<span>Natural Language Processing</span>
-	    				</div>
-    				</div>
-  				</div>
+      </section>
 
-    			<div class="col-md-8">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/chatbot.jpg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/kshitijgupta01/Contextual-Chatbot-in-Pytorch" target="_blank">Contextual Chatbot</a></h3>
-	    					<span>Natural Language Processing</span>
-	    				</div>
-    				</div>
-
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/summary.png);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/kshitijgupta01/Paragraph-Summarizer" target="_blank">Paragraph Summarizer</a></h3>
-	    					<span>Natural Language Processing</span>
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-4">
-    				<div class="row">
-    					<div class="col-md-12">
-		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/mnist.png);">
-		    					<div class="overlay"></div>
-			    				<div class="text text-center p-4">
-			    					<h3><a href="https://github.com/kshitijgupta01/MNIST-Handwritten-Digit-Classification" target="_blank">MNIST Handwritten Digit Classification</a></h3>
-			    					<span>Computer Vision</span>
-			    				</div>
-		    				</div>
-	    				</div>
-	    				<div class="col-md-12">
-		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/unity.jpg);">
-		    					<div class="overlay"></div>
-			    				<div class="text text-center p-4">
-			    					<h3><a href="https://github.com/kshitijgupta01/Unity-Projects" target="_blank">Unity Games</a></h3>
-			    					<span>Game Development</span>
-			    				</div>
-		    				</div>
-	    				</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-		
-
-    <footer class="ftco-footer ftco-section">
-      <div class="container"> 
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+      <section class="section" id="publications" data-tracks="all research">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-kicker">Research</span>
+            <h2 class="section-title">Publications</h2>
+            <p class="section-lead">
+              Multilingual NLP, code-switching, and evaluation benchmarks — methods that make LLM
+              systems sharper in the wild.
+            </p>
           </div>
+
+          <ul class="pub-list">
+            <li class="pub-item reveal">
+              <div>
+                <a
+                  class="pub-title"
+                  href="https://arxiv.org/abs/2502.07747"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >WhoDunit: Evaluation benchmark for culprit detection in mystery stories</a
+                >
+                <p class="pub-blurb">
+                  A long-form narrative reasoning benchmark that tests whether models can identify
+                  the culprit in mystery stories — beyond short QA snippets.
+                </p>
+                <p class="pub-meta">
+                  <a
+                    href="https://arxiv.org/abs/2502.07747"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >arXiv:2502.07747</a
+                  >
+                </p>
+              </div>
+              <span class="pub-venue">arXiv · Dec 2024</span>
+            </li>
+            <li class="pub-item reveal reveal-delay-1">
+              <div>
+                <a
+                  class="pub-title"
+                  href="https://aclanthology.org/2022.nlp4dh-1.8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MALM: Mixing Augmented Language Modeling for Zero-Shot Machine Translation</a
+                >
+                <p class="pub-blurb">
+                  Mixing-based augmentation that improves zero-shot MT without parallel data for
+                  every language pair.
+                </p>
+                <p class="pub-meta">
+                  <a href="https://rootroo.com/en/nlp4dh-2022/" target="_blank" rel="noopener noreferrer"
+                    >NLP4DH</a
+                  >
+                  · Taiwan
+                </p>
+              </div>
+              <span class="pub-venue">AACL-IJCNLP 2022</span>
+            </li>
+            <li class="pub-item reveal reveal-delay-2">
+              <div>
+                <a
+                  class="pub-title"
+                  href="https://link.springer.com/chapter/10.1007/978-981-99-5837-5_26"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Adapting Code-Switching Language Models with Statistical-Based Text Augmentation</a
+                >
+                <p class="pub-blurb">
+                  Statistical text augmentation to adapt LMs for code-switched speech and text where
+                  labeled data is scarce.
+                </p>
+                <p class="pub-meta">
+                  <a href="https://aciids.pwr.edu.pl/2023/" target="_blank" rel="noopener noreferrer"
+                    >ACIIDS</a
+                  >
+                  · Thailand
+                </p>
+              </div>
+              <span class="pub-venue">ACIIDS 2023</span>
+            </li>
+            <li class="pub-item reveal">
+              <div>
+                <a
+                  class="pub-title"
+                  href="https://ieeexplore.ieee.org/document/10337279"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Singaporean Conversational English-Malay Code-Switching Points</a
+                >
+                <p class="pub-blurb">
+                  Characterizes where English–Malay switches occur in real Singaporean conversation
+                  — useful priors for CS modeling.
+                </p>
+                <p class="pub-meta">
+                  <a
+                    href="https://www.colips.org/conferences/ialp2023/wp/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >IALP</a
+                  >
+                  · Singapore
+                </p>
+              </div>
+              <span class="pub-venue">IALP 2023</span>
+            </li>
+            <li class="pub-item reveal reveal-delay-1">
+              <div>
+                <a
+                  class="pub-title"
+                  href="https://ieeexplore.ieee.org/document/10085523"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Data Augmentation for Automated Essay Scoring using Transformer Models</a
+                >
+                <p class="pub-blurb">
+                  Augmentation strategies that improve transformer AES when scored essays are
+                  limited.
+                </p>
+                <p class="pub-meta">
+                  <a href="https://www.glbitm.org/aisc-23/" target="_blank" rel="noopener noreferrer"
+                    >AISC</a
+                  >
+                  · India
+                </p>
+              </div>
+              <span class="pub-venue">AISC 2023</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="writing" data-tracks="all app">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-kicker">Writing</span>
+            <h2 class="section-title">Notes on agents &amp; tracing</h2>
+            <p class="section-lead">
+              Longer-form pieces on tracesage and local-first LangGraph observability.
+            </p>
+          </div>
+
+          <ul class="write-list">
+            <li class="write-item reveal">
+              <div>
+                <a
+                  class="write-title"
+                  href="https://kjgpta.substack.com/p/you-dont-need-langsmith-to-trace"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >You Don’t Need LangSmith to Trace LangGraph</a
+                >
+                <p class="write-blurb">
+                  Why local-first tracing matters for the desk-debug loop, and how two lines of
+                  tracesage replace a wall of print statements without a cloud account.
+                </p>
+                <p class="write-meta">Substack · Jun 21, 2026</p>
+              </div>
+            </li>
+            <li class="write-item reveal reveal-delay-1">
+              <div>
+                <a
+                  class="write-title"
+                  href="https://kjgpta.substack.com/p/tracesage-see-inside-your-langgraph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >tracesage: See Inside Your LangGraph Agents</a
+                >
+                <p class="write-blurb">
+                  Walkthrough of the product: topology, run-trace, MCP attribution, pytest fixture,
+                  and when hosted tracers still make sense.
+                </p>
+                <p class="write-meta">Substack · Jun 16, 2026</p>
+              </div>
+            </li>
+            <li class="write-item reveal reveal-delay-2">
+              <div>
+                <a
+                  class="write-title"
+                  href="https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Python Weekly — Issue 750</a
+                >
+                <p class="write-blurb">
+                  tracesage listed under Interesting Projects, Tools, and Libraries (June 18, 2026).
+                </p>
+                <p class="write-meta">Python Weekly · Jun 18, 2026</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="projects" data-tracks="all app research">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-kicker">Along the way</span>
+            <h2 class="section-title">Earlier projects</h2>
+            <p class="section-lead">
+              Coursework and side projects that led into production ML and research.
+            </p>
+          </div>
+
+          <details class="projects-fold reveal" open>
+            <summary>6 earlier coursework projects</summary>
+          <div
+            class="projects-carousel"
+            data-projects-carousel
+            tabindex="0"
+            aria-roledescription="carousel"
+            aria-label="Earlier projects"
+          >
+            <div class="projects-toolbar">
+              <p class="projects-page" data-projects-page aria-live="polite">1 / 2</p>
+              <div class="projects-nav">
+                <button
+                  type="button"
+                  class="projects-arrow"
+                  data-projects-prev
+                  aria-label="Previous projects"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M15 6 9 12l6 6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="projects-arrow"
+                  data-projects-next
+                  aria-label="Next projects"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="m9 6 6 6-6 6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="projects-viewport">
+              <div class="projects-track" data-projects-track>
+                <a
+                  class="project-link"
+                  href="https://github.com/kjgpta/Token-Bucket-Algorithm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <article class="project">
+                    <div class="project-media">
+                      <img
+                        src="images/tokenbucketimage.png"
+                        alt="Token Bucket Algorithm project"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-body">
+                      <h3 class="project-title">Token Bucket Algorithm</h3>
+                      <p class="project-tag">Object Oriented Programming</p>
+                    </div>
+                  </article>
+                </a>
+
+                <a
+                  class="project-link"
+                  href="https://github.com/kjgpta/SHL-Automated-Essay-Scoring"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <article class="project">
+                    <div class="project-media">
+                      <img
+                        src="images/essay.jpeg"
+                        alt="Automated Essay Scoring project"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-body">
+                      <h3 class="project-title">Automated Essay Scoring</h3>
+                      <p class="project-tag">Natural Language Processing</p>
+                    </div>
+                  </article>
+                </a>
+
+                <a
+                  class="project-link"
+                  href="https://github.com/kjgpta/Contextual-Chatbot-in-Pytorch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <article class="project">
+                    <div class="project-media">
+                      <img
+                        src="images/chatbot.jpg"
+                        alt="Contextual Chatbot project"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-body">
+                      <h3 class="project-title">Contextual Chatbot</h3>
+                      <p class="project-tag">Natural Language Processing</p>
+                    </div>
+                  </article>
+                </a>
+
+                <a
+                  class="project-link"
+                  href="https://github.com/kjgpta/Paragraph-Summarizer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <article class="project">
+                    <div class="project-media">
+                      <img
+                        src="images/summary.png"
+                        alt="Paragraph Summarizer project"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-body">
+                      <h3 class="project-title">Paragraph Summarizer</h3>
+                      <p class="project-tag">Natural Language Processing</p>
+                    </div>
+                  </article>
+                </a>
+
+                <a
+                  class="project-link"
+                  href="https://github.com/kjgpta/MNIST-Handwritten-Digit-Classification"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <article class="project">
+                    <div class="project-media">
+                      <img
+                        src="images/mnist.png"
+                        alt="MNIST handwritten digit classification"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-body">
+                      <h3 class="project-title">MNIST Digit Classification</h3>
+                      <p class="project-tag">Computer Vision</p>
+                    </div>
+                  </article>
+                </a>
+
+                <a
+                  class="project-link"
+                  href="https://github.com/kjgpta/Unity-Projects"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <article class="project">
+                    <div class="project-media">
+                      <img
+                        src="images/unity.jpg"
+                        alt="Unity games projects"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-body">
+                      <h3 class="project-title">Unity Games</h3>
+                      <p class="project-tag">Game Development</p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+            </div>
+          </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" id="skills" data-tracks="all app research">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-kicker">Skills</span>
+            <h2 class="section-title">Stack I reach for</h2>
+            <p class="section-lead">Grouped by how I actually use it — model work, serving, and research.</p>
+          </div>
+
+          <div class="skill-groups reveal">
+            <div class="skill-group">
+              <h3 class="skill-group-title">Models &amp; agents</h3>
+              <div class="skill-cloud">
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>Transformers</span>
+                <span>LoRA / QLoRA</span>
+                <span>RAG</span>
+                <span>Multi-agent</span>
+                <span>LangChain / LangGraph</span>
+                <span>Hugging Face</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3 class="skill-group-title">Serving &amp; infra</h3>
+              <div class="skill-cloud">
+                <span>vLLM</span>
+                <span>Kubernetes</span>
+                <span>AKS</span>
+                <span>Azure</span>
+                <span>AWS</span>
+                <span>Docker</span>
+                <span>OpenTelemetry</span>
+                <span>Databricks</span>
+                <span>CI/CD</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3 class="skill-group-title">Research</h3>
+              <div class="skill-cloud">
+                <span>NLP</span>
+                <span>Code-switching</span>
+                <span>Eval benchmarks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about" data-tracks="all app research">
+        <div class="container">
+          <div class="about-panel reveal">
+            <div class="about-layout">
+              <div class="about-main">
+                <span class="section-kicker">About</span>
+                <h2 class="section-title">How I like to work</h2>
+                <p class="about-lead">
+                  I care about systems that survive real traffic — and methods that hold up under
+                  scrutiny, not demos that die after the slide deck.
+                </p>
+                <p class="about-body">
+                  Open to collaborations on LLM tooling, production AI systems, agent observability,
+                  and applied NLP. Best reached by email.
+                </p>
+                <a class="about-cta" href="mailto:mailguptakshitij@gmail.com">Let’s talk →</a>
+              </div>
+              <div class="about-pillars" aria-label="Working principles">
+                <article class="about-pillar">
+                  <span class="pillar-label">Ship</span>
+                  <h3>Production over theatre</h3>
+                  <p>Latency, accuracy, and grounding under load — not prototype applause.</p>
+                </article>
+                <article class="about-pillar">
+                  <span class="pillar-label">Prove</span>
+                  <h3>Measure what matters</h3>
+                  <p>Quantify impact so teams can trust the system, not just the pitch.</p>
+                </article>
+                <article class="about-pillar">
+                  <span class="pillar-label">Publish</span>
+                  <h3>Sharpen the method</h3>
+                  <p>When the problem needs a better evaluation or model story, write it down.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-main">
+          <h2 class="footer-title">Let’s build something that lasts.</h2>
+          <p class="footer-lead">
+            Open to collaborations on LLM tools, production AI systems, agent observability, and
+            applied NLP. Usually replies within a few days.
+          </p>
+          <div class="footer-actions">
+            <a class="btn btn-primary" href="mailto:mailguptakshitij@gmail.com">Email me</a>
+            <a
+              class="btn btn-ghost"
+              href="https://drive.google.com/file/d/1hyGGLxUZND9vcFseIv2o_QOY_XyQtrWS/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Resume</a
+            >
+          </div>
+        </div>
+        <div class="footer-meta">
+          <ul class="footer-links" aria-label="Elsewhere">
+            <li>
+              <a href="https://github.com/kjgpta" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+            <li>
+              <a
+                href="https://kjgpta.github.io/tracesage/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >tracesage</a
+              >
+            </li>
+            <li>
+              <a href="https://kjgpta.substack.com/" target="_blank" rel="noopener noreferrer"
+                >Substack</a
+              >
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/kjgpta/" target="_blank" rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://scholar.google.com/citations?user=uvSOzIkAAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Scholar</a
+              >
+            </li>
+            <li>
+              <a href="mailto:mailguptakshitij@gmail.com">Email</a>
+            </li>
+          </ul>
+          <p class="footer-machine" aria-label="Machine-readable profile">
+            <a href="/llms.txt">llms.txt</a>
+            <span aria-hidden="true">·</span>
+            <a href="/index.html.md">Markdown</a>
+          </p>
+          <p class="footer-copy">
+            © <span id="year"></span> Kshitij Gupta<br />
+            <a href="mailto:mailguptakshitij@gmail.com">mailguptakshitij@gmail.com</a>
+          </p>
         </div>
       </div>
     </footer>
-    
-  
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
+    <script src="js/main.js"></script>
+    <script>
+      window.goatcounter = {
+        // Skip local previews so localhost / 127.0.0.1 don't inflate stats
+        path: function (p) {
+          var host = location.hostname;
+          if (host === "localhost" || host === "127.0.0.1") return null;
+          return p;
+        },
+      };
+    </script>
+    <script
+      data-goatcounter="https://kjgpta.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
+    <noscript>
+      <img
+        src="https://kjgpta.goatcounter.com/count?p=%2F&t=Kshitij%20Gupta%20Portfolio"
+        alt=""
+        width="1"
+        height="1"
+      />
+    </noscript>
   </body>
 </html>
