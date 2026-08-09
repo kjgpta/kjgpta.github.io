@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="KJ">
-  <defs>
-    <linearGradient id="bg" x1="3" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0A1422"/>
-      <stop offset="1" stop-color="#152A40"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="32" height="32" rx="10" fill="url(#bg)"/>
-  <rect x="1.25" y="1.25" width="29.5" height="29.5" rx="8.75" fill="none" stroke="#3DE0C5" stroke-opacity="0.35" stroke-width="1.25"/>
-
-  <!-- K (ink) + J (teal) — two-letter mark, no accent-dot -->
-  <path fill="#F4F7FB" d="M5.8 7.8h3.7v5.7L14.3 7.8h4.2l-5.7 7 6 9.4h-4.3l-5-7.7v7.7H5.8V7.8z"/>
-  <path fill="#3DE0C5" d="M21.8 7.8h3.7v10.6c0 3.4-1.85 5.3-5.15 5.3-1.55 0-2.95-.4-4-1.15l1.5-2.7c.6.4 1.35.65 2.15.65 1.35 0 2.15-.8 2.15-2.5V7.8z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="K">
+  <rect width="32" height="32" fill="#A33B22"/>
+  <g transform="translate(-0.4 0)" fill="#F4F1E9">
+    <!-- Stem, with slab serifs at cap line and baseline -->
+    <path d="M7 8h7.6v1.9h-2.1v12.2h2.1V24H7v-1.9h2.4V9.9H7z"/>
+    <!-- Arm and leg spring from one point on the stem so the junction stays solid.
+         Both terminate inside their serifs rather than crossing them. -->
+    <g stroke="#F4F1E9" stroke-linecap="butt">
+      <line x1="11.8" y1="15.6" x2="22.4" y2="9.4" stroke-width="2.9"/>
+      <line x1="11.8" y1="15.6" x2="22.8" y2="22.4" stroke-width="3.3"/>
+    </g>
+    <rect x="19.4" y="8" width="6.9" height="2.4"/>
+    <rect x="19.6" y="21.6" width="7" height="2.4"/>
+  </g>
 </svg>

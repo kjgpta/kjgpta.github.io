@@ -60,7 +60,7 @@ On the HTML site, Writing is shown for All / Application focus. Always available
 
 ## Earlier projects
 
-Coursework archive (shown expanded by default on the HTML site, before Skills and About).
+Coursework archive (a plain two-column index on the HTML site, before Skills and About).
 
 - [Token Bucket Algorithm](https://github.com/kjgpta/Token-Bucket-Algorithm): Object Oriented Programming
 - [Automated Essay Scoring](https://github.com/kjgpta/SHL-Automated-Essay-Scoring): Natural Language Processing

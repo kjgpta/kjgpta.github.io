@@ -2,7 +2,7 @@
 
 Forward Deployed Engineer & ML Researcher
 
-> I ship production LLM systems - and publish the NLP research that sharpens how those systems are built. I also build open-source agent tooling (tracesage).
+> I ship production LLM systems, and publish the NLP research that sharpens how those systems are built. I also build open-source agent tooling (tracesage).
 
 - Site: https://kjgpta.github.io/
 - LLM index: https://kjgpta.github.io/llms.txt
@@ -24,14 +24,14 @@ Section order on the site: Experience -> Featured work (tracesage) -> Publicatio
 **June 2026 - Present**
 
 - Partner with customers to ship production AI apps on cloud-native LLM infrastructure.
-- Turn platform capabilities into adoption paths and measurable business outcomes - not slide-deck demos.
+- Turn platform capabilities into adoption paths and measurable business outcomes, not slide-deck demos.
 
 ### Machine Learning Engineer - [Chubb](https://www.chubb.com/) Engineering Center India | Hyderabad
 **July 2023 - May 2026**
 
-- LLaMA-3.1 70B + LoRA/QLoRA + RAG - +25% accuracy, -15% drift.
-- Multi-agent planner / retriever / verifier - +18% factual grounding.
-- vLLM on AKS (A100/H100) - -40% p95, +50% throughput, 10K+ daily requests.
+- LLaMA-3.1 70B + LoRA/QLoRA + RAG: +25% accuracy, -15% drift.
+- Multi-agent planner / retriever / verifier: +18% factual grounding.
+- vLLM on AKS (A100/H100): -40% p95, +50% throughput, 10K+ daily requests.
 - Built HawkHire - explainable AI hiring copilot for internal recruiting workflows (not public).
 
 ### NLP Research Intern - [Speech Lab](https://aseschng.github.io/speechLab_intro.html) | [NTU Singapore](https://www.ntu.edu.sg/)
@@ -61,7 +61,7 @@ Open-source, local-first observability for LangChain and LangGraph. MIT-licensed
 
 **Approach.** Hook LangChain's callback stream, persist to SQLite + gzipped blobs, render an interactive SVG graph + timeline over WebSocket. MCP tools are attributed to their server. Optional OpenTelemetry export bridges into Tempo / Jaeger / Datadog / Honeycomb.
 
-**Outcome.** `pip install "tracesage[langchain]"` then `tracesage demo` - or add one callback to `ainvoke`. Featured in [Python Weekly Issue 750](https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026) (June 18, 2026) under Interesting Projects, Tools, and Libraries.
+**Outcome.** `pip install "tracesage[langchain]"` then `tracesage demo`, or add one callback to `ainvoke`. Featured in [Python Weekly Issue 750](https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026) (June 18, 2026) under Interesting Projects, Tools, and Libraries.
 
 Capabilities:
 
@@ -95,7 +95,7 @@ On the HTML site, Writing appears for All / Application focus. Always listed her
 
 ## Earlier projects
 
-Coursework archive on the HTML site (expanded by default; placed before Skills / About so the page ends on About).
+Coursework archive on the HTML site, set as a plain two-column index before Skills / About so the page ends on About.
 
 - [Token Bucket Algorithm](https://github.com/kjgpta/Token-Bucket-Algorithm) - Object Oriented Programming
 - [Automated Essay Scoring](https://github.com/kjgpta/SHL-Automated-Essay-Scoring) - Natural Language Processing
@@ -114,7 +114,7 @@ Coursework archive on the HTML site (expanded by default; placed before Skills /
 
 ## About
 
-I care about systems that survive real traffic - and methods that hold up under scrutiny, not demos that die after the slide deck.
+I care about systems that survive real traffic, and methods that hold up under scrutiny.
 
 Working principles:
 

@@ -9,18 +9,18 @@
   const yearEl = document.getElementById("year");
 
   const themeColors = {
-    dark: "#04070D",
-    light: "#EEF2F6",
+    dark: "#171512",
+    light: "#F4F1E9",
   };
 
   const getTheme = () =>
-    root.getAttribute("data-theme") === "light" ? "light" : "dark";
+    root.getAttribute("data-theme") === "dark" ? "dark" : "light";
 
   const applyTheme = (theme) => {
     root.setAttribute("data-theme", theme);
     try {
       localStorage.setItem("theme", theme);
-      localStorage.setItem("theme-dir", "clear-signal");
+      localStorage.setItem("theme-dir", "offprint");
     } catch (_) {
       /* ignore */
     }
@@ -72,12 +72,10 @@
     const setMenuOpen = (open) => {
       toggle.setAttribute("aria-expanded", String(open));
       menu.classList.toggle("is-open", open);
-      menu.hidden = !open;
       document.body.classList.toggle("nav-open", open);
 
       if (backdrop) {
         backdrop.classList.toggle("is-open", open);
-        backdrop.hidden = !open;
       }
 
       if (open) {
@@ -94,9 +92,6 @@
     };
 
     const closeMenu = () => setMenuOpen(false);
-
-    // Closed by default (matches hidden attribute in markup)
-    menu.hidden = true;
 
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") === "true";
@@ -285,25 +280,17 @@
       const offset = nav ? nav.offsetHeight + 12 : 72;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: "smooth" });
+
+      // Keep the hash in sync so deep links and the back button still work.
+      try {
+        const url = new URL(window.location.href);
+        url.hash = id;
+        window.history.pushState(null, "", url);
+      } catch (_) {
+        /* ignore */
+      }
     });
   });
-
-  const revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && revealEls.length) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-    );
-    revealEls.forEach((el) => observer.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
-  }
 
   const sections = document.querySelectorAll("main section[id]");
   const navLinks = document.querySelectorAll(
@@ -328,157 +315,4 @@
     sections.forEach((section) => spy.observe(section));
   }
 
-  /* Projects carousel — show 3 (or fewer on small screens), arrow for more */
-  const carousel = document.querySelector("[data-projects-carousel]");
-  if (carousel) {
-    const track = carousel.querySelector("[data-projects-track]");
-    const pageLabel = carousel.querySelector("[data-projects-page]");
-    const prevBtn = carousel.querySelector("[data-projects-prev]");
-    const nextBtn = carousel.querySelector("[data-projects-next]");
-    const items = track ? Array.from(track.querySelectorAll(".project-link")) : [];
-    let page = 0;
-    let touchStartX = null;
-
-    const pageSize = () => {
-      const raw = getComputedStyle(track).getPropertyValue("--page-size").trim();
-      const n = Number.parseInt(raw, 10);
-      return Number.isFinite(n) && n > 0 ? n : 1;
-    };
-
-    const pageCount = () => Math.max(1, Math.ceil(items.length / pageSize()));
-
-    const goTo = (nextPage) => {
-      page = Math.min(Math.max(0, nextPage), pageCount() - 1);
-      render();
-    };
-
-    const render = () => {
-      const size = pageSize();
-      const pages = pageCount();
-      page = Math.min(Math.max(0, page), pages - 1);
-      const offset = page * size;
-      const x = items[offset] ? items[offset].offsetLeft : 0;
-      track.style.transform = `translate3d(-${x}px, 0, 0)`;
-      if (pageLabel) pageLabel.textContent = `${page + 1} / ${pages}`;
-      if (prevBtn) prevBtn.disabled = page <= 0;
-      if (nextBtn) nextBtn.disabled = page >= pages - 1;
-    };
-
-    prevBtn?.addEventListener("click", () => goTo(page - 1));
-    nextBtn?.addEventListener("click", () => goTo(page + 1));
-
-    carousel.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        goTo(page - 1);
-      } else if (event.key === "ArrowRight") {
-        event.preventDefault();
-        goTo(page + 1);
-      } else if (event.key === "Home") {
-        event.preventDefault();
-        goTo(0);
-      } else if (event.key === "End") {
-        event.preventDefault();
-        goTo(pageCount() - 1);
-      }
-    });
-
-    carousel.addEventListener(
-      "touchstart",
-      (event) => {
-        touchStartX = event.changedTouches[0]?.clientX ?? null;
-      },
-      { passive: true }
-    );
-
-    carousel.addEventListener(
-      "touchend",
-      (event) => {
-        if (touchStartX == null) return;
-        const endX = event.changedTouches[0]?.clientX ?? touchStartX;
-        const delta = endX - touchStartX;
-        touchStartX = null;
-        if (Math.abs(delta) < 48) return;
-        if (delta < 0) goTo(page + 1);
-        else goTo(page - 1);
-      },
-      { passive: true }
-    );
-
-    window.addEventListener("resize", () => {
-      render();
-    });
-
-    const fold = carousel.closest("details");
-    fold?.addEventListener("toggle", () => {
-      if (fold.open) window.requestAnimationFrame(render);
-    });
-
-    // Wait a frame so layout/flex sizes settle
-    window.requestAnimationFrame(render);
-  }
-
-  /* Atmosphere: scroll parallax + pointer drift */
-  const orbs = [
-    { el: document.querySelector(".orb-a"), rate: 0.045, max: 28 },
-    { el: document.querySelector(".orb-b"), rate: 0.03, max: 36 },
-    { el: document.querySelector(".orb-c"), rate: 0.055, max: 22 },
-  ].filter((item) => item.el);
-  const mesh = document.querySelector(".mesh-shift");
-  const beam = document.querySelector(".atmosphere-beam");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let ticking = false;
-  let pointerX = 0;
-  let pointerY = 0;
-
-  const updateAtmosphere = () => {
-    ticking = false;
-    if (reduceMotion.matches) return;
-    const y = window.scrollY || 0;
-    orbs.forEach(({ el, rate, max }) => {
-      const shift = Math.max(-max, Math.min(max, y * rate));
-      el.style.translate = `${(pointerX * 12).toFixed(1)}px ${(shift + pointerY * 10).toFixed(1)}px`;
-    });
-    if (mesh) {
-      mesh.style.translate = `${(pointerX * -18).toFixed(1)}px ${(pointerY * -14).toFixed(1)}px`;
-    }
-    if (beam) {
-      beam.style.translate = `${(pointerX * 22).toFixed(1)}px ${(pointerY * 8).toFixed(1)}px`;
-    }
-  };
-
-  const requestAtmosphere = () => {
-    if (reduceMotion.matches) return;
-    if (!ticking) {
-      ticking = true;
-      window.requestAnimationFrame(updateAtmosphere);
-    }
-  };
-
-  if (orbs.length || mesh || beam) {
-    window.addEventListener("scroll", requestAtmosphere, { passive: true });
-    window.addEventListener(
-      "pointermove",
-      (event) => {
-        const w = window.innerWidth || 1;
-        const h = window.innerHeight || 1;
-        pointerX = (event.clientX / w - 0.5) * 2;
-        pointerY = (event.clientY / h - 0.5) * 2;
-        requestAtmosphere();
-      },
-      { passive: true }
-    );
-    updateAtmosphere();
-    reduceMotion.addEventListener("change", () => {
-      if (reduceMotion.matches) {
-        orbs.forEach(({ el }) => {
-          el.style.translate = "";
-        });
-        if (mesh) mesh.style.translate = "";
-        if (beam) beam.style.translate = "";
-      } else {
-        updateAtmosphere();
-      }
-    });
-  }
 })();
