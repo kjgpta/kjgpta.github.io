@@ -1,4 +1,4 @@
-/* Offprint — an editorial sheet for kjgpta.github.io
+/* Styles for kjgpta.github.io
    Set in Newsreader (three optical registers) with Sometype Mono for technical marks. */
 
 /* ---------------------------------------------------------------- tokens */
@@ -719,27 +719,31 @@ a:hover {
   color: var(--ink-3);
 }
 
+/* The buttons carry a dotted underline and darker ink than the label beside
+   them, so the label does not read as a fourth, broken option. */
 .edition-btn {
-  padding: 0 0 1px;
+  padding: 0 0 2px;
   border: 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px dotted var(--rule-strong);
   background: none;
   font-family: var(--face-mono);
   font-size: var(--fs-micro);
   font-weight: 500;
   letter-spacing: var(--tr-caps);
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--ink-2);
   cursor: pointer;
   transition: color 140ms var(--ease-ui), border-color 140ms var(--ease-ui);
 }
 
 .edition-btn:hover {
   color: var(--ink);
+  border-bottom-color: var(--ink);
 }
 
 .edition-btn.is-active {
   color: var(--accent);
+  border-bottom-style: solid;
   border-bottom-color: var(--accent);
 }
 
