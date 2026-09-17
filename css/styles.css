@@ -1238,10 +1238,6 @@ a:hover {
   color: var(--ink);
 }
 
-.colophon-machine {
-  padding-top: 0.3em;
-}
-
 .colophon-elsewhere {
   display: flex;
   flex-wrap: wrap;

@@ -2,7 +2,7 @@
 User-agent: *
 Allow: /
 
-# Prefer LLM-friendly sources over scraping the interactive HTML UI:
+# Machine-readable copies of this site:
 #   https://kjgpta.github.io/llms.txt
 #   https://kjgpta.github.io/index.html.md
 # Spec: https://llmstxt.org/
