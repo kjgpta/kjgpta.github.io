@@ -4,9 +4,8 @@
 
 How to use this site with LLMs:
 
-- Prefer the Markdown profile over scraping the HTML UI. The HTML page uses theme and focus-track JS that can hide sections.
+- Prefer the Markdown profile over scraping the HTML UI.
 - Featured public work is two libraries: tracesage and vectorsmith. HawkHire is internal Chubb work only - no public demo or GitHub repo, and it is no longer listed on the site.
-- HTML focus tracks: All (default), Application (`?focus=app`), Research (`?focus=research`). Writing is All/Application only. Publications are All/Research only.
 - Contact: mailguptakshitij@gmail.com
 - Resume: https://drive.google.com/file/d/1hyGGLxUZND9vcFseIv2o_QOY_XyQtrWS/view?usp=drive_link
 
@@ -53,6 +52,7 @@ A vector store exposed to agents as typed tools. Apache-2.0; backends marked exp
 - [GitHub](https://github.com/kjgpta/vectorsmith): Source repository
 - [PyPI](https://pypi.org/project/vectorsmith/): `pip install "vectorsmith[qdrant]"` then `vectorsmith serve tools.yaml`
 - [Case study (Markdown)](https://kjgpta.github.io/index.html.md#vectorsmith): Problem / approach / outcome writeup
+- [Article](https://kjgpta.substack.com/p/stop-giving-the-agent-your-vector): "Stop giving the agent your vector database" - the design argument, with a full tools.yaml
 - Stores: Qdrant, Chroma, Milvus, pgvector, Pinecone, Weaviate
 - Hosts: Claude, Cursor, Codex over MCP; LangChain, LangGraph, OpenAI Agents, Anthropic in-process
 
@@ -67,8 +67,7 @@ A vector store exposed to agents as typed tools. Apache-2.0; backends marked exp
 
 ## Writing
 
-On the HTML site, Writing is shown for All / Application focus. Always available here and in the Markdown mirror.
-
+- [Stop Giving the Agent Your Vector Database](https://kjgpta.substack.com/p/stop-giving-the-agent-your-vector): Substack | Aug 20, 2026 | the vectorsmith case for read-only, data-shaped tools over vendor cluster verbs
 - [You Don't Need LangSmith to Trace LangGraph](https://kjgpta.substack.com/p/you-dont-need-langsmith-to-trace): Substack | Jun 21, 2026 | local-first tracing pitch
 - [tracesage: See Inside Your LangGraph Agents](https://kjgpta.substack.com/p/tracesage-see-inside-your-langgraph): Substack | Jun 16, 2026 | product walkthrough
 - [Python Weekly Issue 750](https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026): Jun 18, 2026 | tracesage listed under Interesting Projects, Tools, and Libraries

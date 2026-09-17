@@ -15,8 +15,6 @@ Forward Deployed Engineer & ML Researcher
 - LinkedIn: https://www.linkedin.com/in/kjgpta/
 - Scholar: https://scholar.google.com/citations?user=uvSOzIkAAAAJ&hl=en
 
-HTML focus tracks: All (default), Application (`?focus=app`), Research (`?focus=research`). Writing is All/Application only. Publications are All/Research only.
-
 Section order on the site: Experience -> Open source (tracesage, vectorsmith) -> Publications -> Writing -> Earlier projects -> Skills -> About -> Footer
 
 ## Experience
@@ -109,6 +107,7 @@ Links:
 - Docs: https://kjgpta.github.io/vectorsmith/
 - GitHub: https://github.com/kjgpta/vectorsmith
 - PyPI: https://pypi.org/project/vectorsmith/
+- Article: [Stop giving the agent your vector database](https://kjgpta.substack.com/p/stop-giving-the-agent-your-vector)
 - Stores: Qdrant | Chroma | Milvus | pgvector | Pinecone | Weaviate
 - Stack: Python 3.11+ | MCP | Pydantic | Polars | Typer
 
@@ -122,11 +121,10 @@ Links:
 
 ## Writing
 
-On the HTML site, Writing appears for All / Application focus. Always listed here.
-
-1. [You Don't Need LangSmith to Trace LangGraph](https://kjgpta.substack.com/p/you-dont-need-langsmith-to-trace) - Substack | Jun 21, 2026 - local-first tracing pitch vs hosted tracers
-2. [tracesage: See Inside Your LangGraph Agents](https://kjgpta.substack.com/p/tracesage-see-inside-your-langgraph) - Substack | Jun 16, 2026 - product walkthrough (topology, MCP, pytest, production knobs)
-3. [Python Weekly Issue 750](https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026) - Jun 18, 2026 - tracesage listed under Interesting Projects, Tools, and Libraries
+1. [Stop Giving the Agent Your Vector Database](https://kjgpta.substack.com/p/stop-giving-the-agent-your-vector) - Substack | Aug 20, 2026 - the vectorsmith case: read-only, data-shaped tools with enums, hard limits, and an unremovable tenant filter instead of vendor cluster verbs
+2. [You Don't Need LangSmith to Trace LangGraph](https://kjgpta.substack.com/p/you-dont-need-langsmith-to-trace) - Substack | Jun 21, 2026 - local-first tracing pitch vs hosted tracers
+3. [tracesage: See Inside Your LangGraph Agents](https://kjgpta.substack.com/p/tracesage-see-inside-your-langgraph) - Substack | Jun 16, 2026 - product walkthrough (topology, MCP, pytest, production knobs)
+4. [Python Weekly Issue 750](https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026) - Jun 18, 2026 - tracesage listed under Interesting Projects, Tools, and Libraries
 
 ## Earlier projects
 

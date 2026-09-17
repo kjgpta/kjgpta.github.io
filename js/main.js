@@ -43,6 +43,7 @@
 
   try {
     localStorage.removeItem("persona");
+    localStorage.removeItem("focus-track");
   } catch (_) {
     /* ignore */
   }
@@ -137,145 +138,12 @@
     });
   }
 
-  /* Focus track: All / Application / Research */
-  const trackControl = document.querySelector("[data-track-control]");
-  const trackButtons = trackControl
-    ? Array.from(trackControl.querySelectorAll("[data-track]"))
-    : [];
-  const trackIndicator = document.querySelector("[data-track-indicator]");
-  const trackable = () =>
-    document.querySelectorAll("[data-tracks], [data-track-copy]");
-
-  const readTrackFromUrl = () => {
-    try {
-      const focus = new URLSearchParams(window.location.search).get("focus");
-      if (focus === "app" || focus === "research" || focus === "all") return focus;
-    } catch (_) {
-      /* ignore */
-    }
-    return null;
-  };
-
-  const moveTrackIndicator = (activeBtn) => {
-    if (!trackIndicator || !trackControl || !activeBtn) return;
-    const controlBox = trackControl.getBoundingClientRect();
-    const btnBox = activeBtn.getBoundingClientRect();
-    const x = btnBox.left - controlBox.left;
-    trackIndicator.style.width = `${btnBox.width}px`;
-    trackIndicator.style.transform = `translateX(${x}px)`;
-  };
-
-  const applyTrack = (track) => {
-    const next = track === "app" || track === "research" ? track : "all";
-    document.documentElement.setAttribute("data-focus", next);
-
-    trackButtons.forEach((btn) => {
-      const active = btn.getAttribute("data-track") === next;
-      btn.classList.toggle("is-active", active);
-      btn.setAttribute("aria-checked", String(active));
-      btn.tabIndex = active ? 0 : -1;
-    });
-
-    trackable().forEach((el) => {
-      if (el.hasAttribute("data-track-copy")) {
-        const match = el.getAttribute("data-track-copy") === next;
-        el.hidden = !match;
-        el.classList.toggle("is-track-hidden", !match);
-        return;
-      }
-      const tracks = (el.getAttribute("data-tracks") || "all")
-        .split(/\s+/)
-        .filter(Boolean);
-      const visible = tracks.includes(next);
-      el.classList.toggle("is-track-hidden", !visible);
-      if (el.matches("section, .proof-row, li")) {
-        el.setAttribute("aria-hidden", String(!visible));
-      }
-    });
-
-    document
-      .querySelectorAll(".nav-links-mobile li:not(.is-track-hidden) .nav-index")
-      .forEach((el, i) => {
-        el.textContent = String(i + 1).padStart(2, "0");
-      });
-
-    document
-      .querySelectorAll(".proof-strip .proof-row:not(.is-track-hidden) .proof-idx")
-      .forEach((el, i) => {
-        el.textContent = String(i + 1).padStart(2, "0");
-      });
-
-    const activeBtn = trackButtons.find((btn) => btn.getAttribute("data-track") === next);
-    window.requestAnimationFrame(() => moveTrackIndicator(activeBtn));
-
-    try {
-      localStorage.setItem("focus-track", next);
-    } catch (_) {
-      /* ignore */
-    }
-
-    try {
-      const url = new URL(window.location.href);
-      if (next === "all") url.searchParams.delete("focus");
-      else url.searchParams.set("focus", next);
-      window.history.replaceState({}, "", url);
-    } catch (_) {
-      /* ignore */
-    }
-  };
-
-  if (trackControl && trackButtons.length) {
-    let initial = "all";
-    try {
-      const saved = localStorage.getItem("focus-track");
-      if (saved === "app" || saved === "research" || saved === "all") initial = saved;
-    } catch (_) {
-      /* ignore */
-    }
-    const fromUrl = readTrackFromUrl();
-    if (fromUrl) initial = fromUrl;
-
-    trackButtons.forEach((btn) => {
-      btn.addEventListener("click", () => applyTrack(btn.getAttribute("data-track")));
-    });
-
-    trackControl.addEventListener("keydown", (event) => {
-      const order = ["all", "app", "research"];
-      const current = document.documentElement.getAttribute("data-focus") || "all";
-      const idx = order.indexOf(current);
-      if (event.key === "ArrowRight" || event.key === "ArrowDown") {
-        event.preventDefault();
-        applyTrack(order[(idx + 1) % order.length]);
-        trackButtons.find((b) => b.classList.contains("is-active"))?.focus();
-      } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
-        event.preventDefault();
-        applyTrack(order[(idx - 1 + order.length) % order.length]);
-        trackButtons.find((b) => b.classList.contains("is-active"))?.focus();
-      } else if (event.key === "Home") {
-        event.preventDefault();
-        applyTrack("all");
-        trackButtons[0]?.focus();
-      } else if (event.key === "End") {
-        event.preventDefault();
-        applyTrack("research");
-        trackButtons[trackButtons.length - 1]?.focus();
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      const activeBtn = trackButtons.find((btn) => btn.classList.contains("is-active"));
-      moveTrackIndicator(activeBtn);
-    });
-
-    applyTrack(initial);
-  }
-
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (event) => {
       const id = anchor.getAttribute("href");
       if (!id || id === "#") return;
       const target = document.querySelector(id);
-      if (!target || target.classList.contains("is-track-hidden")) return;
+      if (!target) return;
       event.preventDefault();
       const offset = nav ? nav.offsetHeight + 12 : 72;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
@@ -302,7 +170,6 @@
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          if (entry.target.classList.contains("is-track-hidden")) return;
           const id = entry.target.getAttribute("id");
           navLinks.forEach((link) => {
             const active = link.getAttribute("href") === `#${id}`;

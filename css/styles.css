@@ -708,53 +708,9 @@ a:hover {
   margin-bottom: var(--sp-2);
 }
 
-.edition {
-  grid-column: text-start / note-end;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--sp-1) var(--sp-3);
-  margin-block: var(--sp-5) var(--sp-4);
-  padding-block: var(--sp-2);
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
-
-.edition-label {
-  color: var(--ink-3);
-}
-
-/* The buttons carry a dotted underline and darker ink than the label beside
-   them, so the label does not read as a fourth, broken option. */
-.edition-btn {
-  padding: 0 0 2px;
-  border: 0;
-  border-bottom: 1px dotted var(--rule-strong);
-  background: none;
-  font-family: var(--face-mono);
-  font-size: var(--fs-micro);
-  font-weight: 500;
-  letter-spacing: var(--tr-caps);
-  text-transform: uppercase;
-  color: var(--ink-2);
-  cursor: pointer;
-  transition: color 140ms var(--ease-ui), border-color 140ms var(--ease-ui);
-}
-
-.edition-btn:hover {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
-}
-
-.edition-btn.is-active {
-  color: var(--accent);
-  border-bottom-style: solid;
-  border-bottom-color: var(--accent);
-}
-
 .standfirst {
   max-width: 30rem;
-  margin-bottom: var(--sp-4);
+  margin-block: var(--sp-5) var(--sp-4);
   font-size: var(--fs-lead);
   font-variation-settings: "opsz" 28;
   line-height: 1.33;
@@ -1314,7 +1270,7 @@ a:hover {
 }
 
 /* ----------------------------------------------------------------- print
-   The sheet prints as a plain CV: one column, one ink, every edition shown. */
+   The sheet prints as a plain CV: one column, one ink. */
 
 @media print {
   :root,
@@ -1348,21 +1304,8 @@ a:hover {
   .mobile-drawer,
   .nav-backdrop,
   .skip-link,
-  .edition,
   .colophon-elsewhere {
     display: none !important;
-  }
-
-  /* Print the complete record regardless of the edition on screen. Block
-     rather than revert, since reverting an anchor would restore it inline. */
-  [data-tracks].is-track-hidden {
-    display: block !important;
-  }
-
-  /* The selected-list numerals are renumbered live by the edition filter, so
-     they would collide once the filtered-out rows are printed back in. */
-  .proof-idx {
-    display: none;
   }
 
   .sheet,
