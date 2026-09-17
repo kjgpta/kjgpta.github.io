@@ -655,9 +655,14 @@ a:hover {
       var(--edge) [edge-end];
   }
 
-  .entry {
+  .entry,
+  .work-item {
     grid-column: text;
     grid-template-columns: [text-start note-start] minmax(0, 1fr) [text-end note-end];
+  }
+
+  .work-item > .entry {
+    grid-column: text;
   }
 
   /* Margin notes fold in beneath their referent, set off by a rule. */
@@ -965,6 +970,93 @@ a:hover {
   color: var(--ink-3);
 }
 
+/* ------------------------------------------------------------ work items
+   Two libraries share the section, so each repeats the sheet's column
+   structure the way .entry does rather than reaching for subgrid. */
+
+.work-item {
+  grid-column: text-start / note-end;
+  display: grid;
+  grid-template-columns:
+    [text-start] minmax(0, var(--measure)) [text-end]
+    var(--gutter)
+    [note-start] minmax(0, var(--margin-col)) [note-end];
+}
+
+.work-item > * {
+  grid-column: text;
+  min-width: 0;
+}
+
+/* Beats .work-item > * on specificity so nested figures keep their margin. */
+.work-item > .entry {
+  grid-column: text-start / note-end;
+}
+
+.work-item + .work-item {
+  margin-top: var(--sp-6);
+  padding-top: var(--sp-6);
+  border-top: 1px solid var(--rule);
+}
+
+.work-title {
+  margin-bottom: var(--sp-2);
+}
+
+.work-lead {
+  margin-bottom: var(--sp-2);
+  font-size: var(--fs-lead);
+  font-variation-settings: "opsz" 20;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+
+/* -------------------------------------------------------------- contract
+   vectorsmith has no screenshot worth printing, so its figure is typeset:
+   the same tool as authored on the left, as the model receives it on the
+   right. Set in mono because both sides are literally config. */
+
+.contract {
+  margin-block: var(--sp-2) var(--sp-5);
+}
+
+.contract-grid {
+  display: grid;
+  gap: var(--sp-3);
+  padding: var(--sp-3);
+  background: var(--paper-inset);
+  border: 1px solid var(--rule-strong);
+}
+
+.contract-head {
+  margin-bottom: var(--sp-2);
+  padding-bottom: var(--sp-1);
+  border-bottom: 1px solid var(--rule);
+  color: var(--accent);
+}
+
+.contract-list {
+  list-style: none;
+  font-family: var(--face-mono);
+  font-size: var(--fs-note);
+  line-height: 1.75;
+  color: var(--ink-2);
+}
+
+.contract-tool {
+  color: var(--ink);
+}
+
+.contract-list span::before {
+  content: ": ";
+  color: var(--ink-3);
+}
+
+.contract-list span {
+  color: var(--ink-3);
+}
+
 /* --------------------------------------------------------------- listing
    Shared row structure for the bibliography and the contents list. */
 
@@ -1091,6 +1183,17 @@ a:hover {
 @media (min-width: 640px) {
   .index-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* Both halves of the contract sit side by side once there is room. */
+  .contract-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-4);
+  }
+
+  .contract-col + .contract-col {
+    padding-left: var(--sp-4);
+    border-left: 1px solid var(--rule);
   }
 }
 
@@ -1264,10 +1367,26 @@ a:hover {
 
   .sheet,
   .entry,
+  .work-item,
   .listing > li,
   .proof-row,
   .index-list {
     display: block !important;
+  }
+
+  /* The two halves of the tool contract stack rather than sit side by side,
+     which keeps them legible at print measure. */
+  .contract-grid {
+    display: block !important;
+    padding: 6pt 8pt;
+    break-inside: avoid;
+    border: 1px solid #999;
+  }
+
+  .contract-col + .contract-col {
+    margin-top: 6pt;
+    padding-left: 0;
+    border-left: 0;
   }
 
   .aside {

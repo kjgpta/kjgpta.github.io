@@ -13,7 +13,7 @@ Follows [llms.txt](https://llmstxt.org/):
 
 Also: [`robots.txt`](https://kjgpta.github.io/robots.txt), [`sitemap.xml`](https://kjgpta.github.io/sitemap.xml).
 
-Featured public work: [tracesage](https://kjgpta.github.io/tracesage/) · [GitHub](https://github.com/kjgpta/tracesage) · [Substack](https://kjgpta.substack.com/).
+Open-source libraries: [tracesage](https://kjgpta.github.io/tracesage/) ([GitHub](https://github.com/kjgpta/tracesage)) · [vectorsmith](https://kjgpta.github.io/vectorsmith/) ([GitHub](https://github.com/kjgpta/vectorsmith)) · [Substack](https://kjgpta.substack.com/).
 
 ## Layout
 

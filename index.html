@@ -6,7 +6,7 @@
     <title>Kshitij Gupta</title>
     <meta
       name="description"
-      content="I build production LLM systems at TrueFoundry and publish NLP research on evaluation and code-switching. I also wrote tracesage, a local-first agent tracer."
+      content="I build production LLM systems at TrueFoundry and publish NLP research on evaluation and code-switching. I also maintain tracesage and vectorsmith."
     />
     <meta name="author" content="Kshitij Gupta" />
     <link rel="canonical" href="https://kjgpta.github.io/" />
@@ -21,7 +21,7 @@
     <meta property="og:title" content="Kshitij Gupta" />
     <meta
       property="og:description"
-      content="I build production LLM systems at TrueFoundry. I also write NLP research and maintain tracesage, a local-first tracer for LangChain agents."
+      content="I build production LLM systems at TrueFoundry. I also write NLP research and maintain tracesage and vectorsmith, two open-source libraries for agent work."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://kjgpta.github.io/" />
@@ -36,7 +36,7 @@
     <meta name="twitter:title" content="Kshitij Gupta" />
     <meta
       name="twitter:description"
-      content="I build production LLM systems at TrueFoundry. I also write NLP research and maintain tracesage, a local-first tracer for LangChain agents."
+      content="I build production LLM systems at TrueFoundry. I also write NLP research and maintain tracesage and vectorsmith, two open-source libraries for agent work."
     />
     <meta name="twitter:image" content="https://kjgpta.github.io/images/og-image.png" />
     <meta name="theme-color" content="#F4F1E9" id="theme-color-meta" />
@@ -50,7 +50,7 @@
         "url": "https://kjgpta.github.io/",
         "email": "mailto:mailguptakshitij@gmail.com",
         "jobTitle": ["Forward Deployed Engineer", "ML Researcher"],
-        "description": "Forward deployed engineer at TrueFoundry, building production LLM systems. Publishes NLP research on evaluation, multilingual systems, and code-switching, and maintains tracesage, a local-first tracer for LangChain and LangGraph agents.",
+        "description": "Forward deployed engineer at TrueFoundry, building production LLM systems. Publishes NLP research on evaluation, multilingual systems, and code-switching, and maintains two open-source libraries: tracesage, a local-first tracer for LangChain and LangGraph agents, and vectorsmith, which compiles a YAML contract into typed vector-search tools for agents and MCP.",
         "alumniOf": {
           "@type": "CollegeOrUniversity",
           "name": "BITS Pilani",
@@ -64,6 +64,7 @@
         "sameAs": [
           "https://github.com/kjgpta",
           "https://github.com/kjgpta/tracesage",
+          "https://github.com/kjgpta/vectorsmith",
           "https://kjgpta.substack.com/",
           "https://www.linkedin.com/in/kjgpta/",
           "https://scholar.google.com/citations?user=uvSOzIkAAAAJ&hl=en"
@@ -75,6 +76,8 @@
           "LangChain",
           "LangGraph",
           "Agent observability",
+          "Model Context Protocol",
+          "Vector databases",
           "Natural language processing",
           "Code-switching",
           "MLOps",
@@ -115,7 +118,7 @@
         <a class="brand" href="#home">Kshitij Gupta<span>.</span></a>
         <ul class="nav-links nav-links-desktop">
           <li data-tracks="all app research"><a href="#experience">Experience</a></li>
-          <li data-tracks="all app research"><a href="#work">Work</a></li>
+          <li data-tracks="all app research"><a href="#work">Open source</a></li>
           <li data-tracks="all research"><a href="#publications">Research</a></li>
           <li data-tracks="all app"><a href="#writing">Writing</a></li>
           <li data-tracks="all app research"><a href="#projects">Projects</a></li>
@@ -174,7 +177,7 @@
           <a href="#experience"><span class="nav-index">01</span>Experience</a>
         </li>
         <li data-tracks="all app research">
-          <a href="#work"><span class="nav-index">02</span>Work</a>
+          <a href="#work"><span class="nav-index">02</span>Open source</a>
         </li>
         <li data-tracks="all research">
           <a href="#publications"><span class="nav-index">03</span>Research</a>
@@ -285,6 +288,14 @@
             </span>
             <span class="proof-kicker">Open source</span>
           </a>
+          <a class="proof-row" href="#work" data-tracks="all app research">
+            <span class="proof-idx">02</span>
+            <span class="proof-body">
+              <span class="proof-name">vectorsmith</span>
+              <span class="proof-meta">A vector store as typed tools · MCP</span>
+            </span>
+            <span class="proof-kicker">Open source</span>
+          </a>
           <a
             class="proof-row"
             href="https://arxiv.org/abs/2502.07747"
@@ -292,15 +303,15 @@
             rel="noopener noreferrer"
             data-tracks="all research"
           >
-            <span class="proof-idx">02</span>
+            <span class="proof-idx">03</span>
             <span class="proof-body">
-              <span class="proof-name">WhoDunit</span>
+              <span class="proof-name">WhoDunIt</span>
               <span class="proof-meta">Narrative reasoning benchmark · arXiv · Dec 2024</span>
             </span>
             <span class="proof-kicker">Research</span>
           </a>
           <a class="proof-row" href="#experience" data-tracks="all app">
-            <span class="proof-idx">03</span>
+            <span class="proof-idx">04</span>
             <span class="proof-body">
               <span class="proof-name">Chubb · LLM platform</span>
               <span class="proof-meta">+25% accuracy · −40% p95 · 10K+/day</span>
@@ -326,11 +337,16 @@
           </p>
           <ul class="cv-list">
             <li>
-              Partner with customers to ship production AI apps on cloud-native LLM infrastructure.
+              Design and deploy production AI applications on cloud-native LLM infrastructure: RAG,
+              agentic workflows, and serving.
             </li>
             <li>
-              Turn platform capabilities into adoption paths and measurable business outcomes, not
-              slide-deck demos.
+              Work with customers to turn technical requirements into ML solutions, prototype
+              approaches, evaluate how a system actually behaves, and drive production adoption.
+            </li>
+            <li>
+              Diagnose ML system issues alongside engineering and product, balancing model quality
+              against latency, reliability, and operational constraints.
             </li>
           </ul>
         </article>
@@ -340,16 +356,30 @@
           <h3 class="cv-role">Machine Learning Engineer</h3>
           <p class="cv-org">
             <a href="https://www.chubb.com/" target="_blank" rel="noopener noreferrer">Chubb</a>
-            Engineering Center India, Hyderabad
+            Business Services India, Hyderabad
           </p>
           <ul class="cv-list">
-            <li>LLaMA-3.1 70B with LoRA/QLoRA and RAG: <b>+25%</b> accuracy, <b>−15%</b> drift.</li>
-            <li>Multi-agent planner / retriever / verifier: <b>+18%</b> factual grounding.</li>
             <li>
-              vLLM on AKS (A100/H100): <b>−40%</b> p95, <b>+50%</b> throughput, <b>10K+</b> daily
-              requests.
+              LLaMA-3.1 70B with LoRA/QLoRA and RAG over internal domain data: <b>+25%</b> accuracy,
+              <b>−15%</b> drift, gated on holdout evaluation and progressive traffic.
             </li>
-            <li>Built HawkHire, an explainable AI hiring copilot for internal recruiting.</li>
+            <li>
+              Offline evaluation workflows comparing model and retrieval configurations on accuracy,
+              factual grounding, and regressions before release.
+            </li>
+            <li>
+              A multi-agent planner and router that decomposes intents into subtasks and picks
+              tools: internal search, scraping, and structured database lookups.
+            </li>
+            <li>
+              Retrieval and verification agents with source-level citation tracking:
+              <b>+18%</b> factual grounding over a single-agent baseline.
+            </li>
+            <li>
+              vLLM on AKS (A100/H100) with GPU memory and KV-cache tuning: <b>−40%</b> p95,
+              <b>+50%</b> throughput, <b>10K+</b> daily requests.
+            </li>
+            <li>CI/CD, monitoring, and autoscaling for reproducible model releases.</li>
           </ul>
         </article>
 
@@ -368,14 +398,25 @@
             >
           </p>
           <ul class="cv-list">
-            <li>English–Malay code-switched language models: <b>+20%</b> over baselines.</li>
-            <li>Published multilingual and code-switching work across ACL-adjacent venues.</li>
+            <li>
+              An RNN English–Malay language model for Singaporean conversational speech:
+              <b>+20%</b> over baselines.
+            </li>
+            <li>
+              Statistical and neural augmentation to generate synthetic code-switched training data,
+              and to test what it does to robustness and generalisation.
+            </li>
+            <li>
+              POS tags, switching patterns, and coherence constraints folded into training and
+              inference to cut switching errors.
+            </li>
+            <li>Published and presented at IALP 2023 and ACIIDS 2023.</li>
           </ul>
         </article>
 
         <article class="entry cv-item">
           <p class="aside cv-date">2019 – 2023</p>
-          <h3 class="cv-role">B.E. Electrical &amp; Electronics</h3>
+          <h3 class="cv-role">B.E. Electronics &amp; Electrical Engineering</h3>
           <p class="cv-org">
             <a
               href="https://www.bits-pilani.ac.in/pilani/"
@@ -385,7 +426,10 @@
             >
           </p>
           <ul class="cv-list">
-            <li>Foundations in systems, ML coursework, and applied software projects.</li>
+            <li>
+              Graduated at <b>8.0/10.0</b>, with foundations in systems, ML coursework, and applied
+              software projects.
+            </li>
           </ul>
         </article>
 
@@ -401,62 +445,143 @@
 
       <section class="section sheet" id="work" data-tracks="all app research">
         <div class="section-head">
-          <p class="label">Featured work</p>
-          <h2>tracesage</h2>
+          <p class="label">Open source</p>
+          <h2>Tools I maintain</h2>
           <p class="section-lead">
-            Local-first tracing for LangChain and LangGraph agents: one callback, a live graph, no
-            cloud account.
+            Both came out of wiring agents together at work: one to see what a run actually did, one
+            to give a model typed access to a vector store.
           </p>
         </div>
 
-        <figure class="entry plate">
-          <img
-            src="images/tracesage-topology.png"
-            alt="tracesage showing a live LangGraph agent topology with agents, MCP tools, and LLM nodes"
-            loading="lazy"
-            decoding="async"
-            width="1600"
-            height="1056"
-          />
-          <figcaption class="aside">
-            <b class="fig-num">Fig. 1</b> Live agent topology, drawn from a single LangChain
-            callback: agents, MCP tools, and LLM nodes with the run timeline beneath.
-          </figcaption>
-        </figure>
+        <article class="work-item">
+          <h3 class="work-title">tracesage</h3>
+          <p class="work-lead">
+            Local-first tracing for LangChain and LangGraph agents: one callback, a live graph, no
+            cloud account.
+          </p>
 
-        <p class="case-line">
-          <b>Problem</b> Hosted tracers work well, but reaching for a cloud account to debug an
-          agent at your own desk is the wrong shape of tool.
-        </p>
-        <p class="case-line">
-          <b>Approach</b> Capture the LangChain callback stream, store each run in SQLite, and
-          render a live graph and timeline locally. Prompts never leave the machine. A crash-safe
-          handler, MCP tool-source attribution, a pytest fixture, and optional OpenTelemetry export
-          round it out.
-        </p>
-        <p class="case-line">
-          <b>Outcome</b> <code>pip install "tracesage[langchain]"</code> then
-          <code>tracesage demo</code>. MIT-licensed and in beta; picked up by
-          <a
-            href="https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Python Weekly #750</a
-          >.
-        </p>
+          <figure class="entry plate">
+            <img
+              src="images/tracesage-topology.png"
+              alt="tracesage showing a live LangGraph agent topology with agents, MCP tools, and LLM nodes"
+              loading="lazy"
+              decoding="async"
+              width="1600"
+              height="1056"
+            />
+            <figcaption class="aside">
+              <b class="fig-num">Fig. 1</b> Live agent topology, drawn from a single LangChain
+              callback: agents, MCP tools, and LLM nodes with the run timeline beneath.
+            </figcaption>
+          </figure>
 
-        <p class="work-links">
-          <a href="https://kjgpta.github.io/tracesage/" target="_blank" rel="noopener noreferrer"
-            >Documentation</a
-          >
-          <a href="https://github.com/kjgpta/tracesage" target="_blank" rel="noopener noreferrer"
-            >Source</a
-          >
-          <a href="https://pypi.org/project/tracesage/" target="_blank" rel="noopener noreferrer"
-            >PyPI</a
-          >
-        </p>
-        <p class="work-tech">Python · LangChain · LangGraph · MCP · OpenTelemetry · SQLite</p>
+          <p class="case-line">
+            <b>Problem</b> Hosted tracers work well, but reaching for a cloud account to debug an
+            agent at your own desk is the wrong shape of tool.
+          </p>
+          <p class="case-line">
+            <b>Approach</b> Capture the LangChain callback stream, store each run in SQLite, and
+            render a live graph and timeline locally. Prompts never leave the machine. Run replay,
+            token and latency analysis, MCP tool-source attribution, a pytest fixture, and optional
+            OpenTelemetry export round it out.
+          </p>
+          <p class="case-line">
+            <b>Outcome</b> <code>pip install "tracesage[langchain]"</code> then
+            <code>tracesage demo</code>. MIT-licensed and in beta; picked up by
+            <a
+              href="https://www.pythonweekly.com/p/python-weekly-issue-750-june-18-2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Python Weekly #750</a
+            >.
+          </p>
+
+          <p class="work-links">
+            <a href="https://kjgpta.github.io/tracesage/" target="_blank" rel="noopener noreferrer"
+              >Documentation</a
+            >
+            <a href="https://github.com/kjgpta/tracesage" target="_blank" rel="noopener noreferrer"
+              >Source</a
+            >
+            <a href="https://pypi.org/project/tracesage/" target="_blank" rel="noopener noreferrer"
+              >PyPI</a
+            >
+          </p>
+          <p class="work-tech">Python · LangChain · LangGraph · MCP · OpenTelemetry · SQLite</p>
+        </article>
+
+        <article class="work-item">
+          <h3 class="work-title">vectorsmith</h3>
+          <p class="work-lead">
+            A vector store as typed tools: write a <code>tools.yaml</code>, then load it in Python
+            or serve it over MCP.
+          </p>
+
+          <figure class="entry contract">
+            <div class="contract-grid">
+              <div class="contract-col">
+                <p class="label contract-head">You write</p>
+                <ul class="contract-list">
+                  <li>collection<span>invoices</span></li>
+                  <li>tenant<span>acme</span></li>
+                  <li>url<span>${QDRANT_URL}</span></li>
+                  <li>api_key<span>${QDRANT_API_KEY}</span></li>
+                </ul>
+              </div>
+              <div class="contract-col">
+                <p class="label contract-head">The model sees</p>
+                <ul class="contract-list">
+                  <li class="contract-tool">search_invoices</li>
+                  <li>query<span>string</span></li>
+                  <li>client<span>string</span></li>
+                  <li>status<span>enum</span></li>
+                  <li>min_amount<span>number</span></li>
+                </ul>
+              </div>
+            </div>
+            <figcaption class="aside">
+              <b class="fig-num">Fig. 2</b> One tool, from both sides. Credentials and the tenant
+              filter stay in the YAML; the compiled schema carries only the arguments the model is
+              allowed to set.
+            </figcaption>
+          </figure>
+
+          <p class="case-line">
+            <b>Problem</b> Pointing an agent at your own data usually means one of two compromises.
+            A vendor's MCP server hands the model cluster administration, including upsert and
+            delete. Binding schemas by hand means re-implementing filters, limits, and tenant
+            isolation in every agent that touches the store.
+          </p>
+          <p class="case-line">
+            <b>Approach</b> Declare each tool in a <code>tools.yaml</code>: the collection, the
+            parameters a model may pass, and the static filters it must never see. The compiler
+            validates the file, lints it for leaked secrets, and emits either in-process Python
+            tools or an MCP server. Connection details and tenant scoping stay server-side and are
+            applied to every call.
+          </p>
+          <p class="case-line">
+            <b>Outcome</b> <code>pip install "vectorsmith[qdrant]"</code> then
+            <code>vectorsmith serve tools.yaml</code>. Apache-2.0, on PyPI, with adapters for
+            Qdrant, Chroma, Milvus, pgvector, Pinecone, and Weaviate. The backends are still marked
+            experimental.
+          </p>
+
+          <p class="work-links">
+            <a href="https://kjgpta.github.io/vectorsmith/" target="_blank" rel="noopener noreferrer"
+              >Documentation</a
+            >
+            <a
+              href="https://github.com/kjgpta/vectorsmith"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+            <a href="https://pypi.org/project/vectorsmith/" target="_blank" rel="noopener noreferrer"
+              >PyPI</a
+            >
+          </p>
+          <p class="work-tech">Python · MCP · Pydantic · Qdrant · pgvector · LangChain</p>
+        </article>
       </section>
 
       <section class="section sheet" id="publications" data-tracks="all research">
@@ -471,7 +596,7 @@
 
         <ol class="listing biblio">
           <li>
-            <p class="aside">arXiv · December 2024</p>
+            <p class="aside">arXiv · ACL ARR · December 2024</p>
             <p class="biblio-cite">
               <span class="biblio-num">[1]</span>
               <a
@@ -479,7 +604,7 @@
                 href="https://arxiv.org/abs/2502.07747"
                 target="_blank"
                 rel="noopener noreferrer"
-                >WhoDunit: Evaluation Benchmark for Culprit Detection in Mystery Stories</a
+                >WhoDunIt: Evaluation Benchmark for Culprit Detection in Mystery Stories</a
               >. A long-form narrative reasoning benchmark testing whether models can name the
               culprit across a whole story, not a short QA snippet.
               <a
@@ -707,28 +832,45 @@
         <div class="section-head">
           <p class="label">Skills</p>
           <h2>Stack I reach for</h2>
-          <p class="section-lead">
-            Grouped by how I actually use it: model work, serving, and research.
-          </p>
+          <p class="section-lead">Grouped by where each one actually gets used.</p>
         </div>
 
         <dl class="run-in">
           <div>
-            <dt>Models &amp; agents</dt>
+            <dt>LLM &amp; ML</dt>
             <dd>
-              Python, PyTorch, Transformers, LoRA and QLoRA, RAG, multi-agent systems, LangChain and
-              LangGraph, Hugging Face.
+              NLP, LLMs, RAG, PEFT with LoRA and QLoRA, fine-tuning, prompt engineering,
+              evaluation.
+            </dd>
+          </div>
+          <div>
+            <dt>Research</dt>
+            <dd>
+              Experimental design, model evaluation, error analysis, data augmentation,
+              benchmarking.
             </dd>
           </div>
           <div>
             <dt>Serving &amp; infra</dt>
             <dd>
-              vLLM, Kubernetes, AKS, Azure, AWS, Docker, OpenTelemetry, Databricks, CI/CD.
+              vLLM, Kubernetes on AKS, Docker, KV-cache optimisation, OpenTelemetry, CI/CD,
+              Databricks.
             </dd>
           </div>
           <div>
-            <dt>Research</dt>
-            <dd>Natural language processing, code-switching, evaluation benchmarks.</dd>
+            <dt>Frameworks</dt>
+            <dd>
+              PyTorch, Hugging Face Transformers, spaCy, TensorFlow and Keras, LangChain,
+              LangGraph.
+            </dd>
+          </div>
+          <div>
+            <dt>Backend</dt>
+            <dd>Python, FastAPI, Pydantic, Flask.</dd>
+          </div>
+          <div>
+            <dt>Cloud &amp; data</dt>
+            <dd>Azure, AWS, SQL, CosmosDB.</dd>
           </div>
         </dl>
       </section>
@@ -768,8 +910,10 @@
         </dl>
 
         <p class="about-body">
-          Open to collaborations on LLM tooling, production AI systems, agent observability, and
-          applied NLP. Best reached by email.
+          Most of the work is building and evaluating LLM systems across fine-tuning, RAG, agentic
+          workflows, and production inference, with a lot of the time going on experimentation and
+          on working out where a system fails. Open to collaborations on LLM tooling, production AI
+          systems, agent observability, and applied NLP. Best reached by email.
         </p>
 
         <hr class="rule signature-rule" />
@@ -803,6 +947,9 @@
         <a href="https://github.com/kjgpta" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://kjgpta.github.io/tracesage/" target="_blank" rel="noopener noreferrer"
           >tracesage</a
+        >
+        <a href="https://kjgpta.github.io/vectorsmith/" target="_blank" rel="noopener noreferrer"
+          >vectorsmith</a
         >
         <a href="https://kjgpta.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
         <a href="https://www.linkedin.com/in/kjgpta/" target="_blank" rel="noopener noreferrer"
